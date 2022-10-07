@@ -1,0 +1,99 @@
+.about {
+    padding: 60px 0;
+    background: #84A178;
+    text-align: center;
+
+    .about__uppertitle {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.22;
+    }
+
+    .about__title {
+        text-transform: uppercase;
+        font-family: $heading-font;
+        font-size: 30px;
+        line-height: 1.26;
+        margin-top: 12px;
+    }
+
+    .about__block {
+       /*  @include tablet {
+            display: flex;
+        } */
+    }
+
+    .about__bg {
+        margin-top: 32px;
+        display: inline-block;
+        background-image: linear-gradient(to right, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), linear-gradient(to right, $grey-dot, $grey-dot);
+        border-radius: 50%;
+    }
+
+    .about__img {
+        margin-top: 21px;
+    }
+
+    .about__wrapper {
+        margin-top: 40px;
+
+       /*  @include tablet {
+        
+        } */
+    }
+
+    .about__text {
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        line-height: 1.75;
+    }
+
+    .about__text {
+        display: block;
+    }
+
+    .about__btn {
+        margin-top: 20px;
+    }
+
+    .about__list {
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+        margin-top: 42px;
+    }
+
+    .about__svg-bg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+        border-radius: 50%;
+        background-color: $accent-color;
+        border: none;
+    }
+
+    .about__icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .about__undertitle {
+        font-family: $advantages-font;
+        font-size: 36px;
+        margin-top: 16px;
+        letter-spacing: 0.04em;
+        line-height: 1.16;
+    }
+
+    .about__description {
+        font-weight: 700;
+        font-size: 12px;
+        margin-top: 18px;
+        line-height: 1.66;
+    }
+}
