@@ -1,0 +1,56 @@
+.reviews {
+  padding-top: 80px;
+
+  &__img {
+    margin: 0 auto 32px auto;
+
+    border-radius: 50%;
+
+    @include tablet {
+      margin-bottom: 28px;
+    }
+  }
+  &__text {
+    padding: 34px 39px;
+    margin-bottom: 30px;
+
+    font-size: 12px;
+    line-height: calc(31 / 12);
+    text-align: center;
+
+    border-radius: 10px;
+    background-color: $main-color;
+
+    @include tablet {
+      padding: 28px 80px;
+      margin-bottom: 32px;
+
+      font-size: 14px;
+      font-weight: 500;
+      line-height: calc(26 / 14);
+
+      border-radius: 24px;
+    }
+
+    @include desktop {
+      padding: 39px 74px;
+
+      font-size: 16px;
+      line-height: calc(30 / 16);
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: calc(37 / 20);
+    text-align: center;
+
+    color: $black;
+
+    @include tablet {
+      font-size: 16px;
+      line-height: calc(30 / 16);
+    }
+  }
+}
