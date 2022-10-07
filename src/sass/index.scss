@@ -1,2 +1,14 @@
-@import './common';
-@import './example';
+// @import './example';
+
+@import './base/common';
+@import './base/container';
+@import './base/mixins';
+@import './components/about';
+@import './components/advantages';
+@import './components/affiliates';
+@import './components/contacts';
+@import './components/footer';
+@import './components/gallery';
+@import './components/header-hero';
+@import './components/products';
+@import './components/reviews';
