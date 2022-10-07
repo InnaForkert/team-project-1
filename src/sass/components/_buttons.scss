@@ -1,3 +1,60 @@
+%btn {
+  font-family: $main-font;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(18 / 14);
+
+  padding: 11px 33px;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  color: #000;
+}
+
 .primary-btn {
+  @extend %btn;
   background-color: $accent-color;
+
+  border: none;
+
+  &:hover {
+    background-color: $dark-green;
+  }
+
+  &:focus {
+    background-color: $dark-green;
+    color: $white;
+  }
+
+  &:disabled {
+    background-color: $grey-text;
+  }
+}
+
+.secondary-btn {
+  @extend %btn;
+  background-color: transparent;
+  border: 2px solid $accent-color;
+
+  &:hover {
+    border-color: $dark-green;
+  }
+
+  &:focus {
+    border-color: $dark-green;
+    color: $white;
+  }
+
+  &:disabled {
+    border-color: $grey-text;
+  }
+}
+
+.adaptive-btn {
+  @extend .secondary-btn;
+
+  @media (max-width: 1199px) {
+    padding: 6px 10px;
+  }
 }
