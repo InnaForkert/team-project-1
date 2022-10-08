@@ -1,15 +1,16 @@
 .about {
     padding: 60px 0;
-    background: #84A178;
+    background: $main-color;
     text-align: center;
 
     .about__uppertitle {
         text-transform: uppercase;
         font-size: 18px;
         font-weight: 700;
-        line-height: 1.22;
+        line-height: calc(22/18);
 
         @include tablet {
+            font-weight: 800;
             font-size: 22px;
         }
     }
@@ -19,10 +20,11 @@
         font-family: $heading-font;
         font-size: 30px;
         line-height: 1.26;
-        margin-top: 12px;
+        margin-top: calc(38/30);
 
         @include tablet {
             font-size: 34px;
+            letter-spacing: 0.06em;
         }
     }
 
@@ -30,7 +32,7 @@
         @include tablet {
             display: flex;
             gap: 32px;
-            margin-top: 82px;
+            margin-top: 72px;
         }
     }
 
@@ -64,18 +66,13 @@
 
     .about__text {
         font-size: 12px;
-        letter-spacing: 0.04em;
-        line-height: 1.75;
+        line-height: calc(21/12);
 
         @include tablet {
             &:not(:first-child) {
                 margin-top: 8px;
             }
         }
-    }
-
-    .about__text {
-        display: block;
     }
 
     .about__btn {
@@ -101,7 +98,10 @@
     }
 
     .about__item {
-        width: 152px;
+
+        @include tablet {
+            width: 152px;
+        }      
     }
 
     .about__svg-bg {
@@ -127,11 +127,11 @@
         font-size: 36px;
         margin-top: 16px;
         letter-spacing: 0.04em;
-        line-height: 1.16;
+        line-height: calc(42/36);
 
         @include tablet {
             font-size: 48px;
-            line-height: 1.22;
+            line-height: calc(59/48);
             margin-top: 32px;
         }
     }
@@ -140,13 +140,13 @@
         font-weight: 700;
         font-size: 12px;
         margin-top: 18px;
-        line-height: 1.66;
+        line-height: calc(20/12);
 
         @include tablet {
             font-size: 14px;
-            line-height: 1.22;
+            line-height: calc(24/14);
             font-weight: 400;
-            margin-top: 32px;
+            margin-top: 16px;
         }
     }
 }
