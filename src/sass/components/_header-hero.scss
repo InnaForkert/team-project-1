@@ -5,26 +5,28 @@ header {
 
   background-color: $main-color;
 
+  @include tablet {
+    padding-block: 20px;
+  }
+
   & .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   &__btn {
-    position: absolute;
-    bottom: 63px;
-
     min-width: 152px;
-    right: calc(50% - 152px / 2);
+    right: calc(50% - 76px);
   }
 }
 
 .mobile-menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+  touch-action: none;
 
   padding-top: 100px;
 
@@ -37,6 +39,10 @@ header {
 
   @include tablet {
     background-color: $tablet-menu-green;
+  }
+
+  &.is-open {
+    transform: translateX(0);
   }
 }
 
@@ -52,9 +58,6 @@ header {
   }
 
   &__btn {
-    // position: absolute;
-    // top: 16px;
-    // right: 20px;
     display: flex;
     justify-content: center;
 
@@ -69,6 +72,14 @@ header {
     fill: $white;
   }
 
+  &__btn.is-open &__close {
+    transform: translateX(0);
+  }
+
+  &__btn.is-open &__open {
+    transform: translateX(50px);
+  }
+
   &__icon {
     width: 32px;
     height: 32px;
@@ -76,12 +87,12 @@ header {
 
   &__close {
     transform: translateX(-50px);
-    transition: transform 250ms ease-in-out;
+    transition: transform 350ms ease-in-out;
   }
 
   &__open {
     transform: translateX(0);
-    transition: transform 250ms ease-in-out;
+    transition: transform 350ms ease-in-out;
   }
 }
 
@@ -90,17 +101,10 @@ header {
     width: 40px;
     height: 37px;
     fill: $accent-color;
+
+    @include tablet {
+      width: 48px;
+      height: 44px;
+    }
   }
-}
-
-// mobile menu
-
-.nav__btn.is-open .nav__close {
-  transform: translateX(0);
-}
-.nav__btn.is-open .nav__open {
-  transform: translateX(50px);
-}
-.mobile-menu.is-open {
-  transform: translateX(0);
 }
