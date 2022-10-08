@@ -1,0 +1,24 @@
+.gallery {
+    background: none;
+    background: linear-gradient(to bottom, $main-color 24px, transparent 24px);
+
+    @include tablet {
+        background: linear-gradient(to bottom, $main-color 50%, transparent 50%);
+    }
+
+    @include desktop {
+        background: linear-gradient(to bottom, $main-color 94px, transparent 94px);
+    }
+
+    .gallery__img {
+        margin: 0 auto;
+
+        @include tablet {
+            width: 704px;
+        }
+
+        @include desktop {
+            width: 1013px;
+        }
+    }
+}
