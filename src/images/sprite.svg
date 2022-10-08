@@ -36,8 +36,8 @@
 <path d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z"></path>
 </symbol>
 
-<symbol id="icon-arrow-btn-1" viewBox="0 0 32 32">
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="5.3333" d="M10.667 5.333l13.2 10.667-13.2 10.667"></path>
+<symbol id="icon-arrow-btn" viewBox="0 0 32 32">
+<path d="M4 2l4.95 4L4 10" fill="none" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></path>
 </symbol>
 
 <symbol id="icon-dots-sm-1" viewBox="0 0 205 32">
