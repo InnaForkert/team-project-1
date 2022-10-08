@@ -1,16 +1,26 @@
 <header class="header">
-  <div class="logo">
-    <svg>
-      <use href="./images/sprite.svg#icon-main-logo"></use>
-    </svg>
+  <div class="container">
+    <a href="./index.html" class="logo__link">
+      <svg class="logo__icon">
+        <use href="./images/sprite.svg#icon-main-logo"></use>
+      </svg>
+    </a>
+    <button type="button" class="nav__btn" data-menu-button>
+      <svg class="nav__icon" aria-label="Вмикач мобільного меню">
+        <use class="nav__open" href="./images/sprite.svg#icon-burger"></use>
+        <use class="nav__close" href="./images/sprite.svg#icon-cross"></use>
+      </svg>
+    </button>
+    <div class="mobile-menu" data-menu>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">Home</li>
+          <li class="nav__item">How it’s made?</li>
+          <li class="nav__item">Our products</li>
+          <li class="nav__item">Contact</li>
+        </ul>
+        <button type="button" class="primary-btn header__btn">Buy now</button>
+      </nav>
+    </div>
   </div>
-  <nav class="nav">
-    <ul class="nav__list">
-      <li class="nav__item">Home</li>
-      <li class="nav__item">How it’s made?</li>
-      <li class="nav__item">Our products</li>
-      <li class="nav__item">Contact</li>
-    </ul>
-    <button type="button" class="primary-btn">Buy now</button>
-  </nav>
 </header>
