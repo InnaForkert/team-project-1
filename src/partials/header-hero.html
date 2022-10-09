@@ -5,11 +5,20 @@
         <use href="./images/sprite.svg#icon-main-logo"></use>
       </svg>
     </a>
+
     <button type="button" class="nav__btn" data-menu-button>
-      <svg class="nav__icon" aria-label="Вмикач мобільного меню">
+      <svg
+        class="nav__icon"
+        aria-label="Вмикач мобільного меню"
+        width="32"
+        height="32"
+      >
         <use class="nav__open" href="./images/sprite.svg#icon-burger"></use>
         <use class="nav__close" href="./images/sprite.svg#icon-cross"></use>
       </svg>
+    </button>
+    <button type="button" class="primary-btn header__tablet-btn">
+      Buy now
     </button>
     <div class="mobile-menu" data-menu>
       <nav class="nav">
@@ -34,6 +43,12 @@
     <div class="hero__imgs">
       <svg class="hero__dots">
         <use href="./images/sprite.svg#icon-dots-sm-1"></use>
+      </svg>
+      <svg class="hero__dots--tablet">
+        <use href="./images/sprite.svg#icon-dots-md-1"></use>
+      </svg>
+      <svg class="hero__dots--desktop">
+        <use href="./images/sprite.svg#icon-dots-lg-1"></use>
       </svg>
       <picture class="hero__img">
         <source
@@ -62,6 +77,54 @@
           alt="ice-cream"
         />
       </picture>
+    </div>
+    <div class="hero__tablet">
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="./images/header-hero/many-ice-cream-450-2x.png"
+          type="image/png"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="./images/header-hero/many-ice-cream-304md-2x.png"
+          type="image/png"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./images/header-hero/many-ice-cream-152md.png    1x,
+            ./images/header-hero/many-ice-cream-304md-2x.png 2x
+          "
+          type="image/png"
+        />
+        <img
+          src="./images/header-hero/many-ice-cream-152md.png"
+          alt="ice-cream"
+          class="hero__plate"
+        />
+      </picture>
+      <div class="hero__descr">
+        <p class="hero__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
+        </p>
+        <a href="#" class="arrows">
+          <svg class="hero__arrow">
+            <use href="./images/sprite.svg#icon-arrow-1"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero__numbers">
+      <ul>
+        <li class="hero__numbers--mb">
+          <span class="hero__number">16</span>cafes
+        </li>
+        <li class="hero__numbers--mb">
+          <span class="hero__number">23</span>food trucks
+        </li>
+      </ul>
     </div>
   </div>
 </section>
