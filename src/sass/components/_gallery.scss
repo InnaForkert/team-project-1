@@ -10,15 +10,40 @@
         background: linear-gradient(to bottom, $main-color 94px, transparent 94px);
     }
 
-    .gallery__img {
-        margin: 0 auto;
+    .gallery__wrapper {
+        height: 130px;
 
         @include tablet {
-            width: 704px;
+            height: 327px;
         }
 
         @include desktop {
-            width: 1013px;
+            height: 327px;
         }
     }
+
+    .gallery__img {
+        margin: 0 auto;
+        max-height: 130px;
+        @include tablet {
+            max-height: 327px;
+        }
+
+        @include desktop {
+            height: 422px;
+        }
+    }
+
+    .animate__slideInRight {
+        animation: fadeIn 750ms $cubic-bezier;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0%;
+        }
+        100% {
+            opacity: 100%;
+        }
+        }
 }
