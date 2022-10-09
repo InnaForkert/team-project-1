@@ -10,12 +10,14 @@
   }
 
   @include desktop {
-    padding-top: 17px;
+    padding: 0;
   }
 
   & .container {
     display: flex;
     align-items: center;
+
+  
   }
 
   &__btn {
@@ -70,8 +72,13 @@
   }
 
   &__list {
+   @include desktop {
     display: flex;
     gap: 27px;
+    
+    margin-right: 247px;
+    
+   }
   }
   &__item {
     font-size: 32px;
@@ -85,6 +92,10 @@
       @include tablet {
         margin-bottom: 40px;
       }
+
+      @include desktop {
+        margin-bottom: 0;
+      }
     }
 
     @include tablet {
@@ -97,6 +108,7 @@
     @include desktop {
       font-size: 16px;
       line-height: calc(20 / 16);
+      padding-block: 40px;
     }
   }
 
@@ -115,6 +127,10 @@
     fill: $white;
 
     transition: transform 250ms linear;
+
+    @include desktop {
+      display: none;
+    }
 
     &.is-open {
       @include tablet {
@@ -160,6 +176,12 @@
       width: 48px;
       height: 44px;
     }
+
+    @include desktop {
+      margin-right: 270px;
+      width: 60px;
+        height: 65px;
+    }
   }
 }
 
@@ -174,11 +196,17 @@
     @include tablet {
       position: relative;
     }
+
   }
 
   @include tablet {
     padding-top: 40px;
     height: 349px;
+  }
+
+  @include desktop {
+    padding-top: 45px;
+    height: 564px;
   }
 
   &__buttons {
@@ -190,6 +218,11 @@
 
     @include tablet {
       margin-bottom: 28px;
+    }
+
+    @include desktop {
+      margin-bottom: 42px;
+      gap: 34px;
     }
   }
 
@@ -210,6 +243,14 @@
       font-size: 18px;
       line-height: calc(23 / 18);
     }
+
+    @include desktop {
+      max-width: 367px;
+      margin-bottom: 40px;
+
+      font-size: 38px;
+    line-height: calc(48 / 38);
+    }
   }
 
   &__link {
@@ -220,6 +261,11 @@
     letter-spacing: normal;
 
     color: $accent-color;
+
+    @include desktop {
+      font-size: 14px;
+      line-height: calc(17 / 14);
+    }
   }
 
   &__img {
@@ -240,6 +286,11 @@
     @include tablet {
       right: 80px;
       max-width: 270px;
+    }
+
+    @include desktop {
+      right: 102px;
+      max-width: 447px;
     }
   }
 
@@ -279,12 +330,22 @@
       @media screen and (max-width: 1199px) {
         display: none;
       }
-    }
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 1200px;
+      height: 384px;
+    } 
   }
 
   &__tablet {
     display: flex;
     gap: 33px;
+
+    @include desktop {
+      gap: 14px;
+    }
   }
   &__plate {
     position: relative;
@@ -292,6 +353,10 @@
 
     z-index: 1;
 
+    @include desktop {
+      width: 225px;
+      margin-bottom: 65px;
+    }
     @media screen and (max-width: 767px) {
       display: none;
     }
@@ -304,6 +369,12 @@
     font-size: 12px;
     line-height: calc(17 / 12);
     letter-spacing: normal;
+
+    @include desktop {
+      width: 200px;
+      font-size: 14px;
+    line-height: calc(20 / 14);
+    }
   }
   &__arrow {
     fill: $white;
@@ -317,8 +388,15 @@
     gap: 20px;
     justify-content: flex-end;
 
+    padding-bottom: 17px;
+
     @media screen and (max-width: 767px) {
       display: none;
+    }
+
+    @include desktop {
+      justify-content: center;
+      gap: 32px;
     }
   }
   &__numbers {
@@ -329,7 +407,6 @@
     display: none;
 
     text-align: right;
-    margin-bottom: 20px;
 
     font-family: $main-font;
     font-weight: 400;
@@ -339,9 +416,19 @@
     @include tablet {
       display: block;
     }
+    @include desktop {
+      right: 16px;
+      top: 0;
+      font-size: 14px;
+    line-height: calc(17 / 14);
+    }
 
     &--mb {
       margin-bottom: 20px;
+
+      @include desktop {
+        margin-bottom: 16px;
+      }
     }
   }
 
@@ -357,5 +444,9 @@
     text-transform: uppercase;
 
     color: $black;
+
+    @include desktop {
+      font-size: 46px;
+    }
   }
 }
