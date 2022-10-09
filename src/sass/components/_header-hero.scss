@@ -1,4 +1,4 @@
-header {
+.header {
   width: 100%;
   padding-top: 12px;
   overflow: hidden;
@@ -6,17 +6,30 @@ header {
   background-color: $main-color;
 
   @include tablet {
-    padding-block: 20px;
+    padding-top: 20px;
   }
 
   & .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
   }
+
   &__btn {
     min-width: 152px;
     right: calc(50% - 76px);
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__tablet-btn {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
+    margin-left: 38px;
+    min-width: 152px;
   }
 }
 
@@ -39,6 +52,8 @@ header {
   background-color: $mobile-menu-green;
 
   @include tablet {
+    padding-top: 140px;
+
     background-color: $tablet-menu-green;
   }
 
@@ -55,6 +70,17 @@ header {
 
     &:not(last-child) {
       margin-bottom: 32px;
+
+      @include tablet {
+        margin-bottom: 40px;
+      }
+    }
+
+    @include tablet {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: calc(59 / 48);
+      letter-spacing: normal;
     }
   }
 
@@ -62,15 +88,24 @@ header {
     display: flex;
     justify-content: center;
 
-    width: 32px;
-    height: 32px;
+    margin-left: auto;
 
     border: none;
     background-color: transparent;
     z-index: 999;
     cursor: pointer;
+    transform: translateX(0);
 
     fill: $white;
+
+    transition: transform 250ms linear;
+
+    &.is-open {
+      @include tablet {
+        transform: translateX(190px);
+        transition: transform 250ms linear;
+      }
+    }
   }
 
   &__btn.is-open &__close {
@@ -99,9 +134,11 @@ header {
 
 .logo {
   &__icon {
+    position: relative;
     width: 40px;
     height: 37px;
     fill: $accent-color;
+    z-index: 9999;
 
     @include tablet {
       width: 48px;
@@ -117,12 +154,27 @@ header {
 
   background-color: $main-color;
 
+  & .container {
+    @include tablet {
+      position: relative;
+    }
+  }
+
+  @include tablet {
+    padding-top: 40px;
+    height: 349px;
+  }
+
   &__buttons {
     display: flex;
     gap: 18px;
     align-items: baseline;
 
     margin-bottom: 20px;
+
+    @include tablet {
+      margin-bottom: 28px;
+    }
   }
 
   &__heading {
@@ -134,6 +186,14 @@ header {
     line-height: calc(33 / 26);
     font-family: $heading-font;
     text-transform: uppercase;
+
+    @include tablet {
+      max-width: 181px;
+      margin-bottom: 20px;
+
+      font-size: 18px;
+      line-height: calc(23 / 18);
+    }
   }
 
   &__link {
@@ -149,21 +209,137 @@ header {
   &__img {
     position: absolute;
     bottom: 0;
-    right: calc(77 / 320 * 100%);
+    right: 24%;
 
-    width: calc(157 / 320 * 100%);
+    width: 49%;
+    max-width: 157px;
 
     filter: drop-shadow(0 0 26.8px rgba(252, 252, 252, 0.44));
+
+    @include mobile {
+      right: 77px;
+      max-width: 157px;
+    }
+
+    @include tablet {
+      right: 80px;
+      max-width: 270px;
+    }
   }
 
   &__dots {
     position: absolute;
     bottom: 0;
-    left: 0px;
+    right: 0;
 
-    height: calc(50 / 450 * 100%);
+    height: 11.1%;
+    max-height: 50px;
     width: 100%;
+    max-width: 320px;
 
     fill: $accent-color;
+
+    @include tablet {
+      display: none;
+    }
+
+    &--tablet {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      display: none;
+      width: 768px;
+      height: 67px;
+
+      fill: $accent-color;
+      z-index: 0;
+
+      @include tablet-only {
+        display: block;
+      }
+    }
+    &--desktop {
+      @media screen and (max-width: 1199px) {
+        display: none;
+      }
+    }
+  }
+
+  &__tablet {
+    display: flex;
+    gap: 33px;
+  }
+  &__plate {
+    position: relative;
+    width: 152px;
+
+    z-index: 1;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+  &__text {
+    width: 151px;
+
+    font-weight: 400;
+    font-family: $main-font;
+    font-size: 12px;
+    line-height: calc(17 / 12);
+    letter-spacing: normal;
+  }
+  &__arrow {
+    fill: $white;
+    width: 40px;
+    height: 15px;
+  }
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-end;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+  &__numbers {
+    position: absolute;
+    top: 26px;
+    right: 32px;
+
+    display: none;
+
+    text-align: right;
+    margin-bottom: 20px;
+
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: calc(10 / 8);
+
+    @include tablet {
+      display: block;
+    }
+
+    &--mb {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__number {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-weight: 900;
+    font-size: 28px;
+    font-family: $main-font;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $black;
   }
 }
