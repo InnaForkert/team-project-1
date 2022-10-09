@@ -1,0 +1,88 @@
+.footer {
+  position: relative;
+  background: $main-color;
+}
+
+.footer__upptitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  text-transform: uppercase;
+
+  color: $white;
+}
+
+.footer__title {
+  width: 200px;
+  margin-top: 16px;
+
+  font-weight: 700;
+  font-size: 34px;
+  line-height: calc(41 / 34);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $white;
+}
+
+.footer__list {
+  display: flex;
+  margin-top: 42px;
+  gap: 27px;
+  justify-content: right;
+}
+
+.footer__svg {
+  color: $products-yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 32px;
+  width: 32px;
+
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: $accent-color;
+  border: none;
+}
+
+.footer__icon {
+  width: 18px;
+  height: 18px;
+
+  fill: $main-color;
+}
+
+.footer__undertitle {
+  text-align: right;
+  margin-top: 38px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 186%;
+
+  color: $white;
+}
+
+.footer__undertitle-text {
+  color: $black;
+}
+
+.footer__border {
+  width: 100%;
+
+  border: 1px solid #e1e1e1;
+}
+
+.footer__undertitle-link {
+  margin-top: 16px;
+  padding-bottom: 63px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 152%;
+  text-align: center;
+
+  color: $footer-text;
+}
