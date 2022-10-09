@@ -19,18 +19,13 @@ const sliderReview = () => {
         }
 
         slides.forEach((item) => {
-            item.style.display = 'none';
-            item.classList.remove('animate__animated');
             item.classList.remove('animate__slideInRight');
+            item.style.display = 'none';
         });
         
-
-        slides[slideIndex - 1].style.display = 'block';
         dots[slideIndex - 1].classList.add('reviews__dot--active');
-    }
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
+        slides[slideIndex - 1].style.display = 'block';
+        
     }
 
     function currentSlide(n) {
@@ -41,17 +36,11 @@ const sliderReview = () => {
         for(let i = 0; i < dots.length + 1; i++) {
             if (event.target.classList.contains('reviews__dot') && event.target == dots[i - 1]) {
                 currentSlide(i);
-                slides[slideIndex - 1].classList.toggle('animate__animated');
-                slides[slideIndex - 1].classList.toggle('animate__slideInRight');
+                slides[slideIndex - 1].classList.add('animate__slideInRight');
+                dots[slideIndex - 1].classList.add('reviews__dot--active');
             }
         }
     });
-
-    
 }
-
-window.addEventListener('resize', () => {
-    sliderReview();
-});
 
 sliderReview();
