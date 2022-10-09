@@ -56,5 +56,10 @@
 
   @media (max-width: 1199px) {
     padding: 6px 10px;
+
+    font-weight: 600;
+    font-size: 8px;
+    line-height: calc(10 / 8);
+    letter-spacing: normal;
   }
 }

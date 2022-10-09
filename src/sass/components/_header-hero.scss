@@ -1,6 +1,6 @@
 header {
   width: 100%;
-  padding-block: 12px;
+  padding-top: 12px;
   overflow: hidden;
 
   background-color: $main-color;
@@ -27,6 +27,7 @@ header {
   width: 100vw;
   height: 100vh;
   touch-action: none;
+  z-index: 99;
 
   padding-top: 100px;
 
@@ -66,7 +67,7 @@ header {
 
     border: none;
     background-color: transparent;
-    z-index: 9;
+    z-index: 999;
     cursor: pointer;
 
     fill: $white;
@@ -106,5 +107,63 @@ header {
       width: 48px;
       height: 44px;
     }
+  }
+}
+
+.hero {
+  position: relative;
+  padding-top: 60px;
+  height: 450px;
+
+  background-color: $main-color;
+
+  &__buttons {
+    display: flex;
+    gap: 18px;
+    align-items: baseline;
+
+    margin-bottom: 20px;
+  }
+
+  &__heading {
+    max-width: 247px;
+    margin-bottom: 32px;
+
+    font-size: 26px;
+    letter-spacing: 0.04em;
+    line-height: calc(33 / 26);
+    font-family: $heading-font;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: calc(10 / 8);
+    letter-spacing: normal;
+
+    color: $accent-color;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: calc(77 / 320 * 100%);
+
+    width: calc(157 / 320 * 100%);
+
+    filter: drop-shadow(0 0 26.8px rgba(252, 252, 252, 0.44));
+  }
+
+  &__dots {
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+
+    height: calc(50 / 450 * 100%);
+    width: 100%;
+
+    fill: $accent-color;
   }
 }
