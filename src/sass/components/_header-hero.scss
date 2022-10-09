@@ -1,9 +1,13 @@
 header {
   width: 100%;
-  padding-block: 12px;
+  padding-top: 12px;
   overflow: hidden;
 
   background-color: $main-color;
+
+  @include tablet {
+    padding-block: 20px;
+  }
 
   & .container {
     display: flex;
@@ -11,20 +15,19 @@ header {
     align-items: center;
   }
   &__btn {
-    position: absolute;
-    bottom: 63px;
-
     min-width: 152px;
-    right: calc(50% - 152px / 2);
+    right: calc(50% - 76px);
   }
 }
 
 .mobile-menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+  touch-action: none;
+  z-index: 99;
 
   padding-top: 100px;
 
@@ -37,6 +40,10 @@ header {
 
   @include tablet {
     background-color: $tablet-menu-green;
+  }
+
+  &.is-open {
+    transform: translateX(0);
   }
 }
 
@@ -52,9 +59,6 @@ header {
   }
 
   &__btn {
-    // position: absolute;
-    // top: 16px;
-    // right: 20px;
     display: flex;
     justify-content: center;
 
@@ -63,10 +67,18 @@ header {
 
     border: none;
     background-color: transparent;
-    z-index: 9;
+    z-index: 999;
     cursor: pointer;
 
     fill: $white;
+  }
+
+  &__btn.is-open &__close {
+    transform: translateX(0);
+  }
+
+  &__btn.is-open &__open {
+    transform: translateX(50px);
   }
 
   &__icon {
@@ -76,12 +88,12 @@ header {
 
   &__close {
     transform: translateX(-50px);
-    transition: transform 250ms ease-in-out;
+    transition: transform 350ms ease-in-out;
   }
 
   &__open {
     transform: translateX(0);
-    transition: transform 250ms ease-in-out;
+    transition: transform 350ms ease-in-out;
   }
 }
 
@@ -90,17 +102,68 @@ header {
     width: 40px;
     height: 37px;
     fill: $accent-color;
+
+    @include tablet {
+      width: 48px;
+      height: 44px;
+    }
   }
 }
 
-// mobile menu
+.hero {
+  position: relative;
+  padding-top: 60px;
+  height: 450px;
 
-.nav__btn.is-open .nav__close {
-  transform: translateX(0);
-}
-.nav__btn.is-open .nav__open {
-  transform: translateX(50px);
-}
-.mobile-menu.is-open {
-  transform: translateX(0);
+  background-color: $main-color;
+
+  &__buttons {
+    display: flex;
+    gap: 18px;
+    align-items: baseline;
+
+    margin-bottom: 20px;
+  }
+
+  &__heading {
+    max-width: 247px;
+    margin-bottom: 32px;
+
+    font-size: 26px;
+    letter-spacing: 0.04em;
+    line-height: calc(33 / 26);
+    font-family: $heading-font;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: calc(10 / 8);
+    letter-spacing: normal;
+
+    color: $accent-color;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: calc(77 / 320 * 100%);
+
+    width: calc(157 / 320 * 100%);
+
+    filter: drop-shadow(0 0 26.8px rgba(252, 252, 252, 0.44));
+  }
+
+  &__dots {
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+
+    height: calc(50 / 450 * 100%);
+    width: 100%;
+
+    fill: $accent-color;
+  }
 }

@@ -24,3 +24,44 @@
     </div>
   </div>
 </header>
+<section class="hero">
+  <div class="container">
+    <h1 class="hero__heading">ice cream made with passion</h1>
+    <div class="hero__buttons">
+      <a class="adaptive-btn">Products</a>
+      <a href="#" class="hero__link">How it's made?</a>
+    </div>
+    <div class="hero__imgs">
+      <svg class="hero__dots">
+        <use href="./images/sprite.svg#icon-dots-sm-1"></use>
+      </svg>
+      <picture class="hero__img">
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ./images/header-hero/ice-cream-main-484lg.png     1x,
+            ./images/header-hero/ice-cream-main-968-lg-2x.png 2x
+          "
+          type="image/png"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="./images/header-hero/ice-cream-main-270md.png"
+          type="image/png"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./images/header-hero/ice-cream-main-170sm.png    1x,
+            ./images/header-hero/ice-cream-main-340sm-2x.png 2x
+          "
+          type="image/png"
+        />
+        <img
+          src="./images/header-hero/ice-cream-main-170sm.png"
+          alt="ice-cream"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
