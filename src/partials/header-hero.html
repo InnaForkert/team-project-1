@@ -1,18 +1,26 @@
-<header class="header">
+<header class="header" id="home">
   <div class="container">
-    <a href="./index.html" class="logo__link">
+    <a href="#home" class="logo__link">
       <svg class="logo__icon">
         <use href="./images/sprite.svg#icon-main-logo"></use>
       </svg>
     </a>
     <nav class="nav" data-menu>
       <ul class="nav__list">
-        <li class="nav__item">Home</li>
-        <li class="nav__item">How it’s made?</li>
-        <li class="nav__item">Our products</li>
-        <li class="nav__item">Contact</li>
+        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+        <li class="nav__item">
+          <a href="#about" class="nav__link">How it’s made?</a>
+        </li>
+        <li class="nav__item">
+          <a href="#products" class="nav__link">Our products</a>
+        </li>
+        <li class="nav__item">
+          <a href="#contact" class="nav__link">Contact</a>
+        </li>
       </ul>
-      <button type="button" class="primary-btn header__btn">Buy now</button>
+      <button type="button" class="primary-btn header__btn" data-modal-open>
+        Buy now
+      </button>
     </nav>
     <button type="button" class="nav__btn" data-menu-button>
       <svg
@@ -25,7 +33,11 @@
         <use class="nav__close" href="./images/sprite.svg#icon-cross"></use>
       </svg>
     </button>
-    <button type="button" class="primary-btn header__tablet-btn">
+    <button
+      type="button"
+      class="primary-btn header__tablet-btn"
+      data-modal-open
+    >
       Buy now
     </button>
   </div>
@@ -34,7 +46,7 @@
   <div class="container">
     <h1 class="hero__heading">ice cream made with passion</h1>
     <div class="hero__buttons">
-      <a class="adaptive-btn">Products</a>
+      <button class="adaptive-btn">Products</button>
       <a href="#" class="hero__link">How it's made?</a>
     </div>
     <div class="hero__imgs">
@@ -44,7 +56,7 @@
       <svg class="hero__dots--tablet">
         <use href="./images/sprite.svg#icon-dots-md-1"></use>
       </svg>
-      <img src="./images/dots-lg.png" alt="" class="hero__dots--desktop">
+      <img src="./images/dots-lg.png" alt="" class="hero__dots--desktop" />
       <picture class="hero__img">
         <source
           media="(min-width: 1200px)"
