@@ -3,7 +3,7 @@
         <span class="about__uppertitle">tradition and love</span>
         <h2 class="about__title">how it’s made?</h2>
     
-        <div class="about__block">
+        <div data-aos="fade-up" class="about__block">
             <div class="about__bg">
                 <picture>
                     <source media="(min-width: 1200px)" srcset="./images/about/cow-490-bg.png 1x, ./images/about/cow-490-bg-2x.png 2x" type="image/png">
@@ -22,10 +22,15 @@
                 <p class="about__text">
                     This is enough to choose ice cream and coffee for any mood!
                 </p>
-                <button class="primary-btn about__btn">Read more</button>
+                <button class="primary-btn about__btn">
+                    Read more
+                    <svg class="arrow-icon">
+                        <use href="./images/sprite.svg#icon-arrow"></use>
+                    </svg>
+                </button>
             </div>
         </div>
-        <ul class="about__list">
+        <ul class="about__list" data-aos="zoom-in">
             <li class="about__item">
                 <div class="about__svg-bg">
                     <svg class="about__icon">
