@@ -3,6 +3,11 @@
   background: $main-color;
 }
 
+.footer__base {
+  @include tablet {
+    display: flex;
+  }
+}
 .footer__upptitle {
   font-weight: 700;
   font-size: 18px;
@@ -10,6 +15,12 @@
   text-transform: uppercase;
 
   color: $white;
+  @include tablet {
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
 }
 
 .footer__title {
@@ -19,10 +30,24 @@
   font-weight: 700;
   font-size: 34px;
   line-height: calc(41 / 34);
-  letter-spacing: 0.04em;
+  letter-spacing: normal;
   text-transform: uppercase;
 
   color: $white;
+
+  @include tablet {
+    margin-top: 9px;
+
+    font-size: 48px;
+    line-height: 59px;
+    letter-spacing: 0.06em;
+  }
+}
+.footer__second {
+  @include tablet {
+    margin-left: auto;
+    margin-top: 40px;
+  }
 }
 
 .footer__list {
@@ -30,6 +55,10 @@
   margin-top: 42px;
   gap: 27px;
   justify-content: right;
+
+  @include tablet {
+    gap: 30px;
+  }
 }
 
 .footer__svg {
@@ -45,6 +74,11 @@
   border-radius: 50%;
   background-color: $accent-color;
   border: none;
+
+  @include tablet {
+    height: 34px;
+    width: 34px;
+  }
 }
 
 .footer__icon {
@@ -63,10 +97,18 @@
   line-height: 186%;
 
   color: $white;
+
+  @include tablet {
+    margin-top: 32px;
+  }
 }
 
 .footer__undertitle-text {
   color: $black;
+  @include tablet {
+    font-size: 14px;
+    line-height: 186%;
+  }
 }
 
 .footer__border {
@@ -76,6 +118,8 @@
 }
 
 .footer__undertitle-link {
+  width: 200px;
+
   margin-top: 16px;
   padding-bottom: 63px;
 
@@ -85,4 +129,9 @@
   text-align: center;
 
   color: $footer-text;
+  @include tablet {
+    width: 100%;
+    margin-top: 14px;
+    padding-bottom: 13px;
+  }
 }
