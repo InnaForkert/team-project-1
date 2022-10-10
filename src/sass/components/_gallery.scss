@@ -1,55 +1,103 @@
 .gallery {
-    background: none;
-    background: linear-gradient(to bottom, $main-color 24px, transparent 24px);
+  background: none;
+  background: linear-gradient(to bottom, $main-color 24px, transparent 24px);
+
+  @include tablet {
+    background: linear-gradient(to bottom, $main-color 50%, transparent 50%);
+  }
+
+  @include desktop {
+    background: linear-gradient(to bottom, $main-color 94px, transparent 94px);
+  }
+
+  .gallery__wrapper {
+    height: 130px;
 
     @include tablet {
-        background: linear-gradient(to bottom, $main-color 50%, transparent 50%);
+      height: 327px;
     }
 
     @include desktop {
-        background: linear-gradient(to bottom, $main-color 94px, transparent 94px);
+      height: 327px;
+    }
+  }
+
+  .gallery__img {
+    margin: 0 auto;
+    max-height: 130px;
+    @include tablet {
+      max-height: 327px;
     }
 
-    .gallery__wrapper {
-        height: 130px;
-
-        @include tablet {
-            height: 327px;
-        }
-
-        @include desktop {
-            height: 327px;
-        }
+    @include desktop {
+      height: 422px;
     }
+  }
 
-    .gallery__img {
-        margin: 0 auto;
-        max-height: 130px;
-        @include tablet {
-            max-height: 327px;
-        }
+  .animate__slideInRight {
+    animation: fadeIn 750ms $cubic-bezier;
+  }
 
-        @include desktop {
-            height: 422px;
-        }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0%;
     }
-
-    .animate__slideInRight {
-        animation: fadeIn 750ms $cubic-bezier;
+    100% {
+      opacity: 100%;
     }
+  }
 
-    @keyframes fadeIn {
-        0% {
-            opacity: 0%;
-        }
-        100% {
-            opacity: 100%;
-        }
+  .swing-in-top-fwd {
+    animation: swing-in-top-fwd 750ms $cubic-bezier both;
+  }
+
+  @keyframes swing-in-top-fwd {
+    0% {
+      transform: rotateX(-100deg);
+      transform-origin: top;
+      opacity: 0;
     }
-
-    .swing-in-top-fwd{
-        animation:swing-in-top-fwd 750ms $cubic-bezier both
+    100% {
+      transform: rotateX(0deg);
+      transform-origin: top;
+      opacity: 1;
     }
+  }
+}
 
-    @keyframes swing-in-top-fwd{0%{transform:rotateX(-100deg);transform-origin:top;opacity:0}100%{transform:rotateX(0deg);transform-origin:top;opacity:1}}
+// size of a picture
+
+.gallery__wrapper {
+  position: relative;
+
+  min-width: 279px;
+  height: 130.03px;
+  border-radius: 24px;
+
+  background: transparent;
+
+  @include tablet-only {
+    width: 704px;
+    height: 327px;
+  }
+
+  @include desktop {
+    height: 422px;
+    width: 1013px;
+  }
+}
+
+.gallery__wrapper > picture > img {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  border-radius: 24px;
+  object-fit: cover;
+
+  @include tablet-only {
+  }
+
+  @include mobile-only {
+  }
 }
