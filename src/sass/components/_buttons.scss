@@ -7,7 +7,7 @@
   padding: 11px 33px;
   border-radius: 10px;
 
-  cursor: pointer;
+  cursor: $cursor-dark;
 
   color: #000;
 }
@@ -17,6 +17,10 @@
   background-color: $accent-color;
 
   border: none;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: $cubic-bezier;
 
   &:hover {
     background-color: $dark-green;
@@ -36,6 +40,11 @@
   @extend %btn;
   background-color: transparent;
   border: 2px solid $accent-color;
+  padding: 9px 31px;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: $cubic-bezier;
 
   &:hover {
     border-color: $dark-green;
@@ -62,4 +71,12 @@
     line-height: calc(10 / 8);
     letter-spacing: normal;
   }
+}
+
+.arrow-icon {
+  width: 12px;
+  height: 12px;
+  fill: none;
+  stroke: currentColor;
+  padding-top: 1px;
 }

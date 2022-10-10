@@ -2,8 +2,8 @@
    <div class="container">
         <span class="about__uppertitle">tradition and love</span>
         <h2 class="about__title">how it’s made?</h2>
-    
-        <div class="about__block">
+
+        <div data-aos="fade-up" class="about__block">
             <div class="about__bg">
                 <picture>
                     <source media="(min-width: 1200px)" srcset="./images/about/cow-490-bg.png 1x, ./images/about/cow-490-bg-2x.png 2x" type="image/png">
@@ -22,10 +22,15 @@
                 <p class="about__text">
                     This is enough to choose ice cream and coffee for any mood!
                 </p>
-                <button class="primary-btn about__btn">Read more</button>
+                <button class="primary-btn about__btn">
+                    Read more
+                    <svg class="arrow-icon">
+                        <use href="./images/sprite.svg#icon-arrow"></use>
+                    </svg>
+                </button>
             </div>
         </div>
-        <ul class="about__list">
+        <ul class="about__list" data-aos="zoom-in">
             <li class="about__item">
                 <div class="about__svg-bg">
                     <svg class="about__icon">
@@ -68,4 +73,20 @@
         </ul>
    </div>
 
+   <section class="about__overflow is-hidden">
+    <div class="about__modal">
+        <button type="button" class="about__modal-btn">
+            <svg class="about__modal-icon">
+                <use href="./images/sprite.svg#icon-cross"></use>
+            </svg>
+        </button>
+        <h3 class="about__modal-title">How it’s made?</h3>
+        <iframe src="https://www.youtube.com/embed/h3uBr0CCm58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="about__modal-video"></iframe>
+        <p class="about__modal-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        </p>
+    </div>
 </section>
+
+</section>
+

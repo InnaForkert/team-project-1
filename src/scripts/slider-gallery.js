@@ -15,7 +15,7 @@ const sliderGallery = () => {
         }
 
         slides.forEach((item) => {
-            item.classList.add('animate__slideInRight');
+            item.classList.add('swing-in-top-fwd');
             item.style.display = 'none';
         });
         

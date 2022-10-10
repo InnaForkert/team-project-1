@@ -87,15 +87,17 @@
     border-radius: 50%;
     background-color: $grey-dot;
 
-    transition-property: background-color, border;
+    transition-property: background-color, border, scale;
     transition-duration: 250ms;
     transition-timing-function: $cubic-bezier;
 
-    &:hover {
-      cursor: pointer;
+    &:hover,
+    &:focus {
+      cursor: $cursor-dark;
       border: 1px solid $main-color;
       border-radius: 50%;
       background-color: $main-color;
+      scale: 1.2;
     }
   }
 
@@ -105,12 +107,13 @@
     border: 1px solid $main-color;
     border-radius: 50%;
     background-color: $main-color;
+    scale: 1.2;
   }
 
   .animate__slideInRight {
     animation: slide 750ms $cubic-bezier;
   }
-  
+
   @keyframes slide {
     0% {
       transform: translateX(100%);

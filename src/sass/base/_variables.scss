@@ -18,7 +18,11 @@ $grey-dot: #d9d9d9;
 // fonts
 $main-font: 'Montserrat', sans-serif;
 $heading-font: 'Seymour One', sans-serif;
-$advantages-font: 'Roboto', sans-serif; 
+$advantages-font: 'Roboto', sans-serif;
 
 //  animation
 $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+
+//  cursor
+$cursor-dark: url('../images/cursor-dark.svg'), auto;
+$cursor-light: url('../images/cursor.svg'), auto;
