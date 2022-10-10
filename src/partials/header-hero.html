@@ -7,19 +7,29 @@
     </a>
     <nav class="nav" data-menu>
       <ul class="nav__list">
-        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
         <li class="nav__item">
-          <a href="#about" class="nav__link">How it’s made?</a>
+          <a href="#home" class="nav__link" data-nav-link>Home</a>
         </li>
         <li class="nav__item">
-          <a href="#products" class="nav__link">Our products</a>
+          <a href="#about" class="nav__link" data-nav-link>How it’s made?</a>
         </li>
         <li class="nav__item">
-          <a href="#contact" class="nav__link">Contact</a>
+          <a href="#products" class="nav__link" data-nav-link>Our products</a>
+        </li>
+        <li class="nav__item">
+          <a href="#contacts" class="nav__link" data-nav-link>Contact</a>
         </li>
       </ul>
-      <button type="button" class="primary-btn header__btn" data-modal-open>
+      <button
+        type="button"
+        class="primary-btn header__btn"
+        data-modal-open
+        data-nav-link
+      >
         Buy now
+        <svg class="arrow-icon">
+          <use href="./images/sprite.svg#icon-arrow"></use>
+        </svg>
       </button>
     </nav>
     <button type="button" class="nav__btn" data-menu-button>
@@ -39,6 +49,9 @@
       data-modal-open
     >
       Buy now
+      <svg class="arrow-icon">
+        <use href="./images/sprite.svg#icon-arrow"></use>
+      </svg>
     </button>
   </div>
 </header>
@@ -109,6 +122,7 @@
           src="./images/header-hero/many-ice-cream-152md.png"
           alt="ice-cream"
           class="hero__plate"
+          id="plate"
         />
       </picture>
       <div class="hero__descr">

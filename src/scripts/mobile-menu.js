@@ -11,4 +11,15 @@
 
     mobileMenuRef.classList.toggle('is-open');
   });
+
+  const mobileMenuLinks = document.querySelectorAll('[data-nav-link]');
+
+  const addEvt = function (link) {
+    link.addEventListener('click', () => {
+      menuBtnRef.classList.remove('is-open');
+      mobileMenuRef.classList.remove('is-open');
+    });
+  };
+
+  mobileMenuLinks.forEach(link => addEvt(link));
 })();
