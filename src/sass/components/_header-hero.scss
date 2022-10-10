@@ -16,8 +16,6 @@
   & .container {
     display: flex;
     align-items: center;
-
-  
   }
 
   &__btn {
@@ -72,13 +70,12 @@
   }
 
   &__list {
-   @include desktop {
-    display: flex;
-    gap: 27px;
-    
-    margin-right: 247px;
-    
-   }
+    @include desktop {
+      display: flex;
+      gap: 27px;
+
+      margin-right: 247px;
+    }
   }
   &__item {
     font-size: 32px;
@@ -109,6 +106,15 @@
       font-size: 16px;
       line-height: calc(20 / 16);
       padding-block: 40px;
+    }
+  }
+
+  &__link {
+    padding-block: 15px;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
     }
   }
 
@@ -180,7 +186,7 @@
     @include desktop {
       margin-right: 270px;
       width: 60px;
-        height: 65px;
+      height: 65px;
     }
   }
 }
@@ -196,7 +202,6 @@
     @include tablet {
       position: relative;
     }
-
   }
 
   @include tablet {
@@ -249,11 +254,13 @@
       margin-bottom: 40px;
 
       font-size: 38px;
-    line-height: calc(48 / 38);
+      line-height: calc(48 / 38);
     }
   }
 
   &__link {
+    padding-block: 15px;
+
     text-decoration: underline;
     font-weight: 600;
     font-size: 8px;
@@ -261,6 +268,14 @@
     letter-spacing: normal;
 
     color: $accent-color;
+
+    &:hover {
+      color: $dark-green;
+    }
+
+    &:focus {
+      color: $white;
+    }
 
     @include desktop {
       font-size: 14px;
@@ -336,7 +351,9 @@
 
       width: 1200px;
       height: 384px;
-    } 
+
+      pointer-events: none;
+    }
   }
 
   &__tablet {
@@ -373,7 +390,7 @@
     @include desktop {
       width: 200px;
       font-size: 14px;
-    line-height: calc(20 / 14);
+      line-height: calc(20 / 14);
     }
   }
   &__arrow {
@@ -420,7 +437,7 @@
       right: 16px;
       top: 0;
       font-size: 14px;
-    line-height: calc(17 / 14);
+      line-height: calc(17 / 14);
     }
 
     &--mb {
