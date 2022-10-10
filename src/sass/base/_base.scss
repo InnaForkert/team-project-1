@@ -34,3 +34,7 @@ a {
   color: currentColor;
   cursor: $cursor-dark;
 }
+
+textarea {
+  resize: none;
+}
