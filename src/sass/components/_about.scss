@@ -252,8 +252,8 @@
 
         .about__modal-btn {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 8px;
+            right: 8px;
             padding: 0;
             display: block;
             width: 20px;
@@ -262,15 +262,15 @@
             background: none;
             color: $accent-color;
 
-            @include mobile-only {
-                top: 8px;
-                right: 8px;
+            @include tablet {
+                top: 20px;
+                right: 20px;
              }
         }
 
         .about__modal-icon {
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
 
             transition: fill 250ms $cubic-bezier;
 
@@ -280,9 +280,9 @@
                 fill: currentColor;
             }
 
-            @include mobile-only {
-                width: 16px;
-                height: 16px;
+            @include tablet {
+                width: 20px;
+                height: 20px;
              }
         }
 
@@ -291,55 +291,56 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            max-width: 568px;
+            min-width: 320px;
             border: 1px solid $accent-color;
             border-radius: 10px;
             background: $white;
-            padding: 32px 60px;
+            padding: 28px;
 
-            @include mobile-only {
-               padding: 28px;
+            @include tablet {
+                padding: 32px 60px;
+                max-width: 569px;
             }
         }
 
         .about__modal-title {
             color: $black;
-            font-size: 20px;
             font-family: $heading-font;
-            line-height: calc(28/20);
+            font-size: 16px;
+            line-height: calc(24/16);
 
-            @include mobile-only {
-                font-size: 16px;
-                line-height: calc(24/16);
+            @include tablet {
+                font-size: 20px;
+                line-height: calc(28/20);
             }
         }
 
         .about__modal-video {
-            margin-top: 32px;
-            max-height: 205px;
             width: 100%;
+            min-height: 199px;
+            margin-top: 20px;
             background: $black;
             border: 1px solid $black;
             border-radius: 10px;
 
-            @include mobile-only {
-                min-width: 224px;
-                min-height: 199px;
-                margin-top: 20px;
+            @include tablet {
+                margin-top: 32px;
+                max-height: 205px;
+                width: 448px;
             }
         }
 
         .about__modal-text {
-            margin-top: 32px;
-            font-size: 16px;
+            margin-top: 20px;
+            line-height: calc(20/14);
+            font-size: 14px;
             color: $black;
-            line-height: calc(22/16);
             font-family: $main-font;
 
-            @include mobile-only {
-                margin-top: 20px;
-                line-height: calc(20/14);
-                font-size: 14px;
+            @include tablet {
+                margin-top: 32px;
+                font-size: 16px;
+                line-height: calc(22/16);
              }
         }
     }
