@@ -1,5 +1,5 @@
 .contacts {
-  background: $main-color;
+  background: linear-gradient(to bottom, transparent 340px, $main-color 340px);
   color: $black;
 
   font-family: 'Montserrat';
@@ -13,6 +13,13 @@
     line-height: 1.83;
 
     margin: 0 auto;
+    padding-top: 80px;
+
+    background: linear-gradient(
+      to bottom,
+      transparent 390px,
+      $main-color 390px
+    );
   }
 
   @include desktop {
@@ -20,8 +27,23 @@
     line-height: 1.83;
 
     margin: 0 auto;
+    padding-top: 48px;
+
+    background: linear-gradient(
+      to bottom,
+      transparent 148px,
+      $main-color 148px
+    );
   }
 }
+
+// .contacts::before {
+//   display: block;
+//   content: ' ';
+//   height: 120px;
+//   background: transparent;
+// }
+
 .contacts__title {
   font-size: 0px;
   text-indent: -9999px;
