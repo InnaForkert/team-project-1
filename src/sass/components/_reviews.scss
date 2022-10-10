@@ -91,9 +91,9 @@
     transition-duration: 250ms;
     transition-timing-function: $cubic-bezier;
 
-    &:hover, 
+    &:hover,
     &:focus {
-      cursor: pointer;
+      cursor: $cursor-dark;
       border: 1px solid $main-color;
       border-radius: 50%;
       background-color: $main-color;
@@ -113,7 +113,7 @@
   .animate__slideInRight {
     animation: slide 750ms $cubic-bezier;
   }
-  
+
   @keyframes slide {
     0% {
       transform: translateX(100%);
