@@ -8,38 +8,23 @@
     <div class="modal-content">
       <p class="modal-content__title">Buy now</p>
 
-      <!-- options-choice -->
-      <!-- <div class="purchase-option"> -->
-      <!-- <input class="checkbox-option" type="checkbox" id="choose-option" /> -->
-      <!-- <label class="checkbox" for="choose-option">
-      <div class="checkbox__img">
-            <img
-              src="./images/products/product-1-200-sm.png"
-              alt="морозиво"
-              class="checkbox__img-product"
-              width="131"
-              height="131"
-            />
-          </div> -->
-      <!-- <span class="checkbox__img-overlay"></span> -->
-      <!-- <img
-            src="./images/products/product-1-200-sm.png"
-            alt="морозиво"
-            class="checkbox__img"
-            width="131"
-            height="131"
-          /> -->
-
-      <!-- <div class="checkbox__name">ice cream</div> -->
-      <!-- </label> -->
-      <!-- </div> -->
-
       <ul class="modal-bn-list">
         <li class="modal-bn-item">
-          <input class="modal-bn-checkbox" type="checkbox" id="choose-option" />
-          <label class="modal-bn-product" for="choose-option">
-            <span class="modal-bn-product__border"></span>
-            <span class="modal-bn-product__overlay"></span>
+          <input
+            class="modal-bn-checkbox modal-bn-checkbox--fp visually-hidden"
+            type="checkbox"
+            id="choose-option--fp"
+          />
+          <label
+            class="modal-bn-product modal-bn-product--fp"
+            for="choose-option--fp"
+          >
+            <span
+              class="modal-bn-product__border modal-bn-product__border--fp"
+            ></span>
+            <span
+              class="modal-bn-product__overlay modal-bn-product__overlay--fp"
+            ></span>
             <img
               src="./images/products/product-1-200-sm.png"
               alt="морозиво"
@@ -51,52 +36,111 @@
           </label>
         </li>
 
-        <li class="modal-bn-product">
-          <span class="modal-item__border"></span>
-          <span class="modal-item__overlay"></span>
-          <img
-            src="./images/products/product-1-200-sm.png"
-            alt="морозиво"
-            class="modal-item__img"
-            width="131"
-            height="131"
+        <li class="modal-bn-item">
+          <input
+            class="modal-bn-checkbox modal-bn-checkbox--sp visually-hidden"
+            type="checkbox"
+            id="choose-option--sp"
           />
-          <p class="modal-item__text">ice cream</p>
+          <label
+            class="modal-bn-product modal-bn-product--sp"
+            for="choose-option--sp"
+          >
+            <span
+              class="modal-bn-product__border modal-bn-product__border--sp"
+            ></span>
+            <span
+              class="modal-bn-product__overlay modal-bn-product__overlay--sp"
+            ></span>
+            <img
+              src="./images/products/product-2-200-sm.png"
+              alt="морозиво"
+              class="modal-bn-product__img"
+              width="131"
+              height="131"
+            />
+            <p class="modal-bn-product__text">ice coffee</p>
+          </label>
         </li>
 
-        <li class="modal-item">
-          <span class="modal-item__border"></span>
-          <span class="modal-item__overlay"></span>
-          <img
-            src="./images/products/product-1-200-sm.png"
-            alt="морозиво"
-            class="modal-item__img"
-            width="131"
-            height="131"
+        <li class="modal-bn-item">
+          <input
+            class="modal-bn-checkbox modal-bn-checkbox--tp visually-hidden"
+            type="checkbox"
+            id="choose-option--tp"
           />
-
-          <p class="modal-item__text">ice cream</p>
+          <label
+            class="modal-bn-product modal-bn-product--tp"
+            for="choose-option--tp"
+          >
+            <span
+              class="modal-bn-product__border modal-bn-product__border--tp"
+            ></span>
+            <span
+              class="modal-bn-product__overlay modal-bn-product__overlay--tp"
+            ></span>
+            <img
+              src="./images/products/product-3-200-sm.png"
+              alt="морозиво"
+              class="modal-bn-product__img"
+              width="131"
+              height="131"
+            />
+            <p class="modal-bn-product__text">milkshake</p>
+          </label>
         </li>
-        <li class="modal-item"></li>
-        <li class="modal-item"></li>
       </ul>
 
-      <!-- <ul class="modal-list">
-        <li class="modal-item">
-          <span class="modal-item__overlay"></span>
-          <img
-            src="./images/products/product-1-200-sm.png"
-            alt="морозиво"
-            class="modal-item__img"
-            width="131"
-            height="131"
+      <form action="" class="bn-form">
+        <div class="bn-block">
+          <input
+            type="text"
+            name="name"
+            id="bn-name"
+            placeholder="Name"
+            class="bn-input"
+            required
           />
-          <p class="modal-item__text">ice cream</p>
-          <span class="modal-item__border"></span>
-        </li>
-        <li class="modal-item"></li>
-        <li class="modal-item"></li>
-      </ul> -->
+        </div>
+        <div class="bn-block">
+          <input
+            type="tel"
+            name="tel"
+            id="bn-tel"
+            placeholder="Phone"
+            class="bn-input"
+            required
+          />
+        </div>
+        <div class="bn-block">
+          <textarea
+            name="comment"
+            id="bn-comment"
+            rows="10"
+            placeholder="Comment"
+            class="bn-comment"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="bn-button">Submit</button>
+      </form>
     </div>
   </div>
 </div>
+
+<!-- <ul class="modal-list">
+  <li class="modal-item">
+    <span class="modal-item__overlay"></span>
+    <img
+      src="./images/products/product-1-200-sm.png"
+      alt="морозиво"
+      class="modal-item__img"
+      width="131"
+      height="131"
+    />
+    <p class="modal-item__text">ice cream</p>
+    <span class="modal-item__border"></span>
+  </li>
+  <li class="modal-item"></li>
+  <li class="modal-item"></li>
+</ul> -->
