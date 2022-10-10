@@ -121,7 +121,7 @@
     border: none;
     background-color: transparent;
     z-index: 999;
-    cursor: pointer;
+    cursor: $cursor-dark;
     transform: translateX(0);
 
     fill: $white;
