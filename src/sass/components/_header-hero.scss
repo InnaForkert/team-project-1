@@ -114,7 +114,11 @@
 
     &:hover,
     &:focus {
-      color: $accent-color;
+      color: $black;
+
+      @include desktop {
+        color: $accent-color;
+      }
     }
   }
 
@@ -192,26 +196,29 @@
 }
 
 .hero {
-  position: relative;
   padding-top: 60px;
-  height: 450px;
 
   background-color: $main-color;
 
   & .container {
+    position: relative;
+    height: 450px;
+
     @include tablet {
-      position: relative;
+      height: 349px;
+    }
+
+    @include desktop {
+      height: 564px;
     }
   }
 
   @include tablet {
     padding-top: 40px;
-    height: 349px;
   }
 
   @include desktop {
     padding-top: 45px;
-    height: 564px;
   }
 
   &__buttons {
@@ -286,17 +293,12 @@
   &__img {
     position: absolute;
     bottom: 0;
-    right: 24%;
+    right: 77px;
 
     width: 49%;
     max-width: 157px;
 
     filter: drop-shadow(0 0 26.8px rgba(252, 252, 252, 0.44));
-
-    @include mobile {
-      right: 77px;
-      max-width: 157px;
-    }
 
     @include tablet {
       right: 80px;
