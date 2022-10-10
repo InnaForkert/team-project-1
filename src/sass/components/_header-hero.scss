@@ -16,8 +16,6 @@
   & .container {
     display: flex;
     align-items: center;
-
-  
   }
 
   &__btn {
@@ -72,13 +70,12 @@
   }
 
   &__list {
-   @include desktop {
-    display: flex;
-    gap: 27px;
-    
-    margin-right: 247px;
-    
-   }
+    @include desktop {
+      display: flex;
+      gap: 27px;
+
+      margin-right: 247px;
+    }
   }
   &__item {
     font-size: 32px;
@@ -109,6 +106,19 @@
       font-size: 16px;
       line-height: calc(20 / 16);
       padding-block: 40px;
+    }
+  }
+
+  &__link {
+    padding-block: 15px;
+
+    &:hover,
+    &:focus {
+      color: $black;
+
+      @include desktop {
+        color: $accent-color;
+      }
     }
   }
 
@@ -180,33 +190,35 @@
     @include desktop {
       margin-right: 270px;
       width: 60px;
-        height: 65px;
+      height: 65px;
     }
   }
 }
 
 .hero {
-  position: relative;
   padding-top: 60px;
-  height: 450px;
 
   background-color: $main-color;
 
   & .container {
+    position: relative;
+    height: 450px;
+
     @include tablet {
-      position: relative;
+      height: 349px;
     }
 
+    @include desktop {
+      height: 564px;
+    }
   }
 
   @include tablet {
     padding-top: 40px;
-    height: 349px;
   }
 
   @include desktop {
     padding-top: 45px;
-    height: 564px;
   }
 
   &__buttons {
@@ -249,11 +261,13 @@
       margin-bottom: 40px;
 
       font-size: 38px;
-    line-height: calc(48 / 38);
+      line-height: calc(48 / 38);
     }
   }
 
   &__link {
+    padding-block: 15px;
+
     text-decoration: underline;
     font-weight: 600;
     font-size: 8px;
@@ -261,6 +275,14 @@
     letter-spacing: normal;
 
     color: $accent-color;
+
+    &:hover {
+      color: $dark-green;
+    }
+
+    &:focus {
+      color: $white;
+    }
 
     @include desktop {
       font-size: 14px;
@@ -271,17 +293,12 @@
   &__img {
     position: absolute;
     bottom: 0;
-    right: 24%;
+    right: 77px;
 
     width: 49%;
     max-width: 157px;
 
     filter: drop-shadow(0 0 26.8px rgba(252, 252, 252, 0.44));
-
-    @include mobile {
-      right: 77px;
-      max-width: 157px;
-    }
 
     @include tablet {
       right: 80px;
@@ -336,7 +353,9 @@
 
       width: 1200px;
       height: 384px;
-    } 
+
+      pointer-events: none;
+    }
   }
 
   &__tablet {
@@ -373,7 +392,7 @@
     @include desktop {
       width: 200px;
       font-size: 14px;
-    line-height: calc(20 / 14);
+      line-height: calc(20 / 14);
     }
   }
   &__arrow {
@@ -420,7 +439,7 @@
       right: 16px;
       top: 0;
       font-size: 14px;
-    line-height: calc(17 / 14);
+      line-height: calc(17 / 14);
     }
 
     &--mb {
