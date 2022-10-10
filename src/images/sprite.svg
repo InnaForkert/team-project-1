@@ -39,7 +39,7 @@
 </symbol>
 
 <symbol id="icon-arrow-btn" viewBox="0 0 32 32">
-<path d="M4 2l4.95 4L4 10" fill="none" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></path>
+<path d="M4 2l4.95 4L4 10" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></path>
 </symbol>
 
 <symbol id="icon-dots-sm-1" viewBox="0 0 205 32">
@@ -259,6 +259,10 @@
 </symbol>
 <symbol id="icon-arrow-1" viewBox="0 0 82 32">
 <path d="M81.414 17.414c0.781-0.781 0.781-2.047 0-2.828l-12.728-12.728c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l11.314 11.314-11.314 11.314c-0.781 0.781-0.781 2.047 0 2.828s2.047 0.781 2.828 0l12.728-12.728zM0 18h80v-4h-80v4z"></path>
+</symbol>
+
+<symbol id="icon-arrow" viewBox="0 0 32 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="5.3333" d="M10.667 5.333l13.196 10.667-13.196 10.667"></path>
 </symbol>
 </defs>
 </svg>
