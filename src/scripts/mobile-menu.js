@@ -1,6 +1,7 @@
 (() => {
   const menuBtnRef = document.querySelector('[data-menu-button]');
   const mobileMenuRef = document.querySelector('[data-menu]');
+  const mobileMenuLink = document.querySelector('[data-nav-link]');
 
   menuBtnRef.addEventListener('click', () => {
     const expanded =
@@ -11,4 +12,15 @@
 
     mobileMenuRef.classList.toggle('is-open');
   });
+
+  mobileMenuLink.addEventListener('click', () => {
+    menuBtnRef.classList.toggle('is-open');
+    mobileMenuRef.classList.toggle('is-open');
+  });
 })();
+const mobileMenuLink = document.querySelector('[data-nav-link]');
+
+mobileMenuLink.addEventListener('click', () => {
+  menuBtnRef.classList.toggle('is-open');
+  mobileMenuRef.classList.toggle('is-open');
+});
