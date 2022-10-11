@@ -16,7 +16,6 @@ const closeModalBM = function () {
 };
 
 closeModalBtnBM.addEventListener('click', closeModalBM);
-overlayBM.addEventListener('click', closeModalBM);
 
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modalBM.classList.contains('is-hidden')) {
@@ -43,7 +42,6 @@ const closeModalBD = function () {
 };
 
 closeModalBtnBD.addEventListener('click', closeModalBD);
-overlayBD.addEventListener('click', closeModalBD);
 
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modalBD.classList.contains('is-hidden')) {
