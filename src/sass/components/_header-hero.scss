@@ -16,6 +16,10 @@
   & .container {
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 1199px) and (orientation: landscape) {
+      align-items: flex-start;
+    }
   }
 
   &__btn {
@@ -24,6 +28,9 @@
 
     @include tablet {
       display: none;
+    }
+    @media screen and (max-width: 1199px) and (orientation: landscape) {
+      margin-right: 30px;
     }
   }
 
@@ -78,7 +85,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
-      justify-content: space-around;
+      justify-content: center;
     }
     @include desktop {
       display: flex;
@@ -100,8 +107,7 @@
         margin-bottom: 40px;
       }
       @media screen and (max-width: 1199px) and (orientation: landscape) {
-        min-width: 34%;
-        font-size: 28px;
+        font-size: 20px;
       }
       @include desktop {
         margin-bottom: 0;
