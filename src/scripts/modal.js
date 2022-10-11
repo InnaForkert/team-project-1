@@ -27,3 +27,18 @@
     refs.modal.classList.toggle('is-hidden');
   }
 })();
+
+(() => {
+  const refs = {
+    openModalBtn: document.querySelector('[data-open-franchise]'),
+    closeModalBtn: document.querySelectorAll('[data-modal-close]'),
+    modal: document.querySelector('[data-franchise]'),
+  };
+
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+
+  function toggleModal() {
+    refs.modal.classList.toggle('is-hidden');
+  }
+})();
