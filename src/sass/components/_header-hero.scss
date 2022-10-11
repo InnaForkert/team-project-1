@@ -16,6 +16,10 @@
   & .container {
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 1199px) and (orientation: landscape) {
+      align-items: flex-start;
+    }
   }
 
   &__btn {
@@ -24,6 +28,9 @@
 
     @include tablet {
       display: none;
+    }
+    @media screen and (max-width: 1199px) and (orientation: landscape) {
+      margin-right: 30px;
     }
   }
 
@@ -64,12 +71,22 @@
 
     background-color: $tablet-menu-green;
   }
+  @media screen and (max-width: 1199px) and (orientation: landscape) {
+    padding-inline: 20px;
+    padding-top: 15%;
+  }
 
   &.is-open {
     transform: translateX(0);
   }
 
   &__list {
+    @media screen and (max-width: 1199px) and (orientation: landscape) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
     @include desktop {
       display: flex;
       gap: 27px;
@@ -89,7 +106,9 @@
       @include tablet {
         margin-bottom: 40px;
       }
-
+      @media screen and (max-width: 1199px) and (orientation: landscape) {
+        font-size: 20px;
+      }
       @include desktop {
         margin-bottom: 0;
       }
