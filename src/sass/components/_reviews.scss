@@ -3,6 +3,7 @@
   margin-top: 75px;
   z-index: 0;
   position: relative;
+  padding-bottom: 48px;
   @include tablet-only {
     margin-top: 55px;
   }
@@ -23,14 +24,18 @@
   }
   &__text {
     padding: 34px 39px;
-    width: 280px;
-    margin: 0 auto;
+    width: 90%;
+    margin: 0 auto 30px auto;
     font-size: 12px;
     line-height: calc(31 / 12);
     text-align: center;
 
     border-radius: 10px;
     background-color: $main-color;
+
+    @include mobile {
+      width: 440px
+    }
 
     @include tablet {
       padding: 28px 80px;
