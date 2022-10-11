@@ -18,7 +18,7 @@ const closeModalCL = function () {
 };
 
 closeModalBtnCL.addEventListener('click', closeModalCL);
-overlayCL.addEventListener('click', closeModalCL);
+
 
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modalCL.classList.contains('is-hidden')) {
@@ -47,7 +47,6 @@ const closeModalCF = function () {
 };
 
 closeModalBtnCF.addEventListener('click', closeModalCF);
-overlayCF.addEventListener('click', closeModalCF);
 
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modalCF.classList.contains('is-hidden')) {
