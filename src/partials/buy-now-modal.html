@@ -37,7 +37,7 @@
               width="131"
               height="131"
             />
-            <p class="modal-bn-product__text">ice cream</p>
+            <span class="modal-bn-product__text">ice cream</span>
           </label>
         </li>
 
@@ -64,7 +64,7 @@
               width="131"
               height="131"
             />
-            <p class="modal-bn-product__text">ice coffee</p>
+            <span class="modal-bn-product__text">ice coffee</span>
           </label>
         </li>
 
@@ -91,7 +91,7 @@
               width="131"
               height="131"
             />
-            <p class="modal-bn-product__text">milkshake</p>
+            <span class="modal-bn-product__text">milkshake</span>
           </label>
         </li>
       </ul>
@@ -128,6 +128,143 @@
           ></textarea>
         </div>
         <button type="submit" class="bn-button">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Tablet & Desktop -->
+
+<div class="tab-backdrop is-hidden" data-modal-local>
+  <div class="tab-modal">
+    <!-- close-icon -->
+    <svg
+      class="tab-modal__close-icon"
+      width="16"
+      height="16"
+      data-modal-close-local
+    >
+      <use href="./images/sprite.svg#icon-cross"></use>
+    </svg>
+
+    <div class="tab-modal-content">
+      <p class="tab-modal-content__title">Buy now</p>
+
+      <ul class="tab-modal-bn-list">
+        <li class="tab-modal-bn-item">
+          <input
+            class="tab-modal-bn-checkbox tab-modal-bn-checkbox--fp visually-hidden"
+            type="checkbox"
+            id="tab-choose-option--fp"
+          />
+          <label
+            class="tab-modal-bn-product tab-modal-bn-product--fp"
+            for="tab-choose-option--fp"
+          >
+            <span
+              class="tab-modal-bn-product__border tab-modal-bn-product__border--fp"
+            ></span>
+            <span
+              class="tab-modal-bn-product__overlay tab-modal-bn-product__overlay--fp"
+            ></span>
+            <img
+              src="./images/products/product-1-200-sm.png"
+              alt="морозиво"
+              class="tab-modal-bn-product__img"
+              width="131"
+              height="131"
+            />
+            <span class="tab-modal-bn-product__text">ice cream</span>
+          </label>
+        </li>
+
+        <li class="tab-modal-bn-item">
+          <input
+            class="tab-modal-bn-checkbox tab-modal-bn-checkbox--sp visually-hidden"
+            type="checkbox"
+            id="tab-choose-option--sp"
+          />
+          <label
+            class="tab-modal-bn-product tab-modal-bn-product--sp"
+            for="tab-choose-option--sp"
+          >
+            <span
+              class="tab-modal-bn-product__border tab-modal-bn-product__border--sp"
+            ></span>
+            <span
+              class="tab-modal-bn-product__overlay tab-modal-bn-product__overlay--sp"
+            ></span>
+            <img
+              src="./images/products/product-2-200-sm.png"
+              alt="морозиво"
+              class="tab-modal-bn-product__img"
+              width="131"
+              height="131"
+            />
+            <span class="tab-modal-bn-product__text">ice coffee</span>
+          </label>
+        </li>
+
+        <li class="tab-modal-bn-item">
+          <input
+            class="tab-modal-bn-checkbox tab-modal-bn-checkbox--tp visually-hidden"
+            type="checkbox"
+            id="tab-choose-option--tp"
+          />
+          <label
+            class="tab-modal-bn-product tab-modal-bn-product--tp"
+            for="tab-choose-option--tp"
+          >
+            <span
+              class="tab-modal-bn-product__border tab-modal-bn-product__border--tp"
+            ></span>
+            <span
+              class="tab-modal-bn-product__overlay tab-modal-bn-product__overlay--tp"
+            ></span>
+            <img
+              src="./images/products/product-3-200-sm.png"
+              alt="морозиво"
+              class="tab-modal-bn-product__img"
+              width="131"
+              height="131"
+            />
+            <span class="tab-modal-bn-product__text">milkshake</span>
+          </label>
+        </li>
+      </ul>
+
+      <form action="" class="tab-bn-form">
+        <div class="tab-bn-block">
+          <input
+            type="text"
+            name="name"
+            id="tab-bn-name"
+            placeholder="Name"
+            class="tab-bn-input"
+            required
+          />
+        </div>
+        <div class="tab-bn-block">
+          <input
+            type="tel"
+            name="tel"
+            id="tab-bn-tel"
+            placeholder="Phone"
+            class="tab-bn-input"
+            required
+          />
+        </div>
+        <div class="tab-bn-block">
+          <textarea
+            name="comment"
+            id="tab-bn-comment"
+            rows="10"
+            placeholder="Comment"
+            class="tab-bn-comment"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="tab-bn-button">Submit</button>
       </form>
     </div>
   </div>
