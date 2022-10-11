@@ -101,6 +101,7 @@
       }
       @media screen and (max-width: 1199px) and (orientation: landscape) {
         min-width: 34%;
+        font-size: 28px;
       }
       @include desktop {
         margin-bottom: 0;
