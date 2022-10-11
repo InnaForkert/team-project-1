@@ -18,6 +18,10 @@
   max-height: 684px;
   overflow-y: scroll;
 
+  @include desktop {
+    max-height: 568px;
+  }
+
   & .modal__close-icon {
     position: absolute;
     top: 8px;
@@ -109,5 +113,13 @@
   @include tablet {
     width: 80%;
     margin-left: 10%;
+  }
+}
+
+.modal__close-icon {
+  cursor: $cursor-dark;
+  transition: fill 250ms ease-in-out;
+  &:hover, &:focus {
+    fill: $accent-color;
   }
 }

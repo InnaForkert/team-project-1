@@ -51,7 +51,11 @@
     display: block;
     margin-bottom: 4px;
     margin-left: auto;
+
+    
   }
+
+  
 
   @media screen and (max-width: 767px) {
     max-width: 280px;
@@ -108,6 +112,7 @@
 
   height: 200px;
   margin-bottom: 20px;
+
 
   &__border {
     z-index: -2;
@@ -329,6 +334,15 @@
   @media screen and (min-width: 768px) {
     width: 568px;
   }
+
+  &__close-icon {
+    transition: fill 250ms ease-in-out;
+        &:hover {
+          fill: $accent-color;
+          cursor: $cursor-dark;
+        }
+      }
+  
 }
 
 .tab-modal-content {
@@ -378,6 +392,8 @@
   display: block;
 
   height: 200px;
+
+  cursor: $cursor-dark;
   // margin-bottom: 20px;
 
   &__border {
@@ -540,6 +556,8 @@
     background: $accent-color;
     border-radius: 10px;
     border: none;
+
+    cursor: $cursor-dark;
 
     transform: scale(1);
     transition: transform 250ms linear;

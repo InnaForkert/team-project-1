@@ -81,8 +81,8 @@
   overflow: hidden;
   background: none !important;
   width: 268px;
-  height: 190px;
-  margin: 0 auto;
+  max-height: 290px;
+  margin: 0 auto; 
 
   @include tablet {
     width: 448px;

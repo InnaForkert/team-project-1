@@ -37,7 +37,7 @@
 
         &:hover,
         &:focus {
-            cursor: pointer;
+            cursor: $cursor-dark;
             fill: currentColor;
         }
 
