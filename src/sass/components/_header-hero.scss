@@ -509,3 +509,16 @@
     }
   }
 }
+
+//to top btn
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 999;
+  @extend %btn;
+  padding: 10px;
+
+  background-color: $accent-color;
+}
