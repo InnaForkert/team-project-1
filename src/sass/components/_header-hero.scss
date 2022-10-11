@@ -260,6 +260,15 @@
     line-height: calc(33 / 26);
     font-family: $heading-font;
     text-transform: uppercase;
+    &--accent {
+      font-size: 34px;
+      @include tablet {
+        font-size: 24px;
+      }
+      @include desktop {
+        font-size: 38px;
+      }
+    }
 
     @include tablet {
       max-width: 181px;
