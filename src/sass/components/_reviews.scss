@@ -1,5 +1,14 @@
 .reviews {
-  padding-top: 80px;
+  /* padding-top: 80px; */
+  margin-top: 75px;
+
+  @include tablet-only {
+    margin-top: 55px;
+  }
+
+  @include desktop {
+    margin-top: 123px;
+  }
 
   &__img {
     margin: 0 auto 32px auto;
