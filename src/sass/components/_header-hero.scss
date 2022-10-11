@@ -58,6 +58,10 @@
 
     background-color: $mobile-menu-green;
   }
+  @media screen and (max-width: 1199px) and (orientation: landscape) {
+    padding-top: 10%;
+    padding-inline: 20px;
+  }
 
   @media screen and (max-width: 767px) {
     padding-top: 140px;
@@ -70,6 +74,12 @@
   }
 
   &__list {
+    @media screen and (max-width: 1199px) and (orientation: landscape) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: space-around;
+    }
     @include desktop {
       display: flex;
       gap: 27px;
