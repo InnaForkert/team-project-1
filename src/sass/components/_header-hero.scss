@@ -344,6 +344,7 @@
     max-width: 320px;
 
     fill: $accent-color;
+    pointer-events: none;
 
     @include tablet {
       display: none;
@@ -360,6 +361,7 @@
 
       fill: $accent-color;
       z-index: 0;
+      pointer-events: none;
 
       @include tablet-only {
         display: block;
@@ -417,6 +419,21 @@
       line-height: calc(20 / 14);
     }
   }
+  &__arrows {
+    padding-block: 15px;
+    display: flex;
+    align-items: baseline;
+    &:hover {
+      padding-bottom: 11px;
+    }
+    &:hover .hero__arrow {
+      width: 50px;
+      height: 19px;
+    }
+    &:focus .hero__arrow {
+      stroke-width: 2px;
+    }
+  }
   &__arrow {
     fill: $white;
     width: 40px;
@@ -424,20 +441,9 @@
   }
 
   &__descr {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: flex-end;
-
-    padding-bottom: 17px;
-
+    margin: auto 0;
     @media screen and (max-width: 767px) {
       display: none;
-    }
-
-    @include desktop {
-      justify-content: center;
-      gap: 32px;
     }
   }
   &__numbers {
