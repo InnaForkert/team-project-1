@@ -1,6 +1,12 @@
 .footer {
   position: relative;
   background: $main-color;
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .footer__base {
