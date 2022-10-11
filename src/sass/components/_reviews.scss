@@ -1,7 +1,8 @@
 .reviews {
   /* padding-top: 80px; */
   margin-top: 75px;
-
+  z-index: 0;
+  position: relative;
   @include tablet-only {
     margin-top: 55px;
   }
@@ -92,7 +93,7 @@
     }
   }
 
-/*  swiper */
+  /*  swiper */
 
   .swiper-pagination {
     position: unset;
