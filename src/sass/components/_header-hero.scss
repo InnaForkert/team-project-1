@@ -58,15 +58,15 @@
 
     background-color: $mobile-menu-green;
   }
-  @media screen and (max-width: 1199px) and (orientation: landscape) {
-    padding-top: 10%;
-    padding-inline: 20px;
-  }
 
   @media screen and (max-width: 767px) {
     padding-top: 140px;
 
     background-color: $tablet-menu-green;
+  }
+  @media screen and (max-width: 1199px) and (orientation: landscape) {
+    padding-inline: 20px;
+    padding-top: 15%;
   }
 
   &.is-open {
@@ -99,7 +99,9 @@
       @include tablet {
         margin-bottom: 40px;
       }
-
+      @media screen and (max-width: 1199px) and (orientation: landscape) {
+        min-width: 34%;
+      }
       @include desktop {
         margin-bottom: 0;
       }
