@@ -267,20 +267,24 @@
     width: 40px;
     height: 24px;
     display: inline-block;
+    margin-left: 44%;
+    margin-left: 44%;
     margin-bottom: 20px;
-    margin-left: 44%;
-    margin-left: 44%;
-    margin-top: -20%;
+    transition-property: width;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     @include tablet {
-      top: 100px;
+      top: 98px;
       margin-left: 44%;
       margin-left: 44%;
       margin-top: 134%;
       position: absolute;
+      margin-bottom: 0;
     }
 
     @include desktop {
+      margin-bottom: 0;
       margin-left: 44%;
       margin-left: 45%;
       margin-top: 100%;
