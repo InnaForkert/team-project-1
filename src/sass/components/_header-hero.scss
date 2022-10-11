@@ -222,7 +222,7 @@
 
   & .container {
     position: relative;
-    height: 450px;
+    height: 390px;
 
     @include tablet {
       height: 349px;
@@ -263,6 +263,7 @@
     margin-bottom: 32px;
 
     font-size: 26px;
+    font-weight: 400;
     letter-spacing: 0.04em;
     line-height: calc(33 / 26);
     font-family: $heading-font;
@@ -328,7 +329,8 @@
     width: 49%;
     max-width: 157px;
 
-    filter: drop-shadow(0 0 26.8px rgba(252, 252, 252, 0.44));
+    filter: drop-shadow(0 0 30px rgba(252, 252, 252, 0.44))
+      drop-shadow(0 0 20px rgba(252, 252, 252, 0.44));
 
     @include tablet {
       right: 80px;
@@ -346,7 +348,6 @@
     bottom: 0;
     right: 0;
 
-    height: 11.1%;
     max-height: 50px;
     width: 100%;
     max-width: 320px;
