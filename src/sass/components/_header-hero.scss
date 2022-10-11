@@ -125,6 +125,7 @@
 
   &__link {
     padding-block: 15px;
+    transition: color 200ms ease-in-out;
 
     &:hover,
     &:focus {
@@ -298,6 +299,7 @@
     letter-spacing: normal;
 
     color: $accent-color;
+    transition: color 250ms ease-in-out;
 
     &:hover {
       color: $dark-green;
@@ -424,6 +426,8 @@
     padding-block: 15px;
     display: flex;
     align-items: baseline;
+    transition: padding-bottom 200ms linear;
+
     &:hover {
       padding-bottom: 11px;
     }
@@ -439,6 +443,8 @@
     fill: $white;
     width: 40px;
     height: 15px;
+
+    transition: width 200ms linear, height 200ms linear;
   }
 
   &__descr {
