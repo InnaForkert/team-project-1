@@ -22,6 +22,10 @@
     );
   }
 
+  &__btn {
+    min-width: 196px;
+  }
+
   @include desktop {
     font-size: 16px;
     line-height: 1.83;

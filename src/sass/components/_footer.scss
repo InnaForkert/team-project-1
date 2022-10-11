@@ -1,6 +1,12 @@
 .footer {
   position: relative;
   background: $main-color;
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .footer__base {
@@ -117,7 +123,7 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 186%;
-
+  letter-spacing: normal;
   color: $white;
 
   @include tablet {

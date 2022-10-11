@@ -67,7 +67,7 @@
   }
 
   @media screen and (max-width: 767px) {
-    padding-top: 140px;
+    padding-top: 100px;
 
     background-color: $tablet-menu-green;
   }
@@ -200,7 +200,7 @@
     width: 40px;
     height: 37px;
     fill: $accent-color;
-    z-index: 3;
+    z-index: 55;
 
     @include tablet {
       width: 48px;
@@ -222,10 +222,10 @@
 
   & .container {
     position: relative;
-    height: 450px;
+    height: 390px;
 
     @include tablet {
-      height: 349px;
+      height: 332px;
     }
 
     @include desktop {
@@ -234,7 +234,7 @@
   }
 
   @include tablet {
-    padding-top: 40px;
+    padding-top: 36px;
   }
 
   @include desktop {
@@ -263,6 +263,7 @@
     margin-bottom: 32px;
 
     font-size: 26px;
+    font-weight: 400;
     letter-spacing: 0.04em;
     line-height: calc(33 / 26);
     font-family: $heading-font;
@@ -328,7 +329,8 @@
     width: 49%;
     max-width: 157px;
 
-    filter: drop-shadow(0 0 26.8px rgba(252, 252, 252, 0.44));
+    filter: drop-shadow(0 0 30px rgba(252, 252, 252, 0.44))
+      drop-shadow(0 0 20px rgba(252, 252, 252, 0.44));
 
     @include tablet {
       right: 80px;
@@ -346,7 +348,6 @@
     bottom: 0;
     right: 0;
 
-    height: 11.1%;
     max-height: 50px;
     width: 100%;
     max-width: 320px;
@@ -454,13 +455,14 @@
 
   &__descr {
     margin: auto 0;
+    padding-top: 27px;
     @media screen and (max-width: 767px) {
       display: none;
     }
   }
   &__numbers {
     position: absolute;
-    top: 26px;
+    top: -10px;
     right: 32px;
 
     display: none;
@@ -471,6 +473,7 @@
     font-weight: 400;
     font-size: 8px;
     line-height: calc(10 / 8);
+    letter-spacing: normal;
 
     @include tablet {
       display: block;

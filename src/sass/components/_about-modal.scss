@@ -32,11 +32,12 @@
         width: 16px;
         height: 16px;
 
+
         transition: fill 250ms $cubic-bezier;
 
         &:hover,
         &:focus {
-            cursor: pointer;
+            cursor: $cursor-dark;
             fill: currentColor;
         }
 
@@ -44,6 +45,8 @@
             width: 20px;
             height: 20px;
          }
+
+
     }
 
     .about__modal {
@@ -65,6 +68,8 @@
 
     .about__modal-title {
         color: $black;
+
+        text-align: center;
         font-family: $heading-font;
         font-size: 16px;
         line-height: calc(24/16);
