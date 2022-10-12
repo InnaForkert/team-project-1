@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
 
-    @media screen and (max-width: 1199px) and (orientation: landscape) {
+    @media screen and (max-width: 1199.5px) and (orientation: landscape) {
       align-items: flex-start;
     }
   }
@@ -29,13 +29,13 @@
     @include tablet {
       display: none;
     }
-    @media screen and (max-width: 1199px) and (orientation: landscape) {
+    @media screen and (max-width: 1199.5px) and (orientation: landscape) {
       margin-right: 30px;
     }
   }
 
   &__tablet-btn {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.5px) {
       display: none;
     }
 
@@ -48,7 +48,7 @@
 }
 
 .nav {
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1199.5px) {
     position: fixed;
     top: 0;
     left: 0;
@@ -66,12 +66,12 @@
     background-color: $mobile-menu-green;
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.5px) {
     padding-top: 100px;
 
     background-color: $tablet-menu-green;
   }
-  @media screen and (max-width: 1199px) and (orientation: landscape) {
+  @media screen and (max-width: 1199.5px) and (orientation: landscape) {
     padding-inline: 20px;
     padding-top: 15%;
   }
@@ -81,7 +81,7 @@
   }
 
   &__list {
-    @media screen and (max-width: 1199px) and (orientation: landscape) {
+    @media screen and (max-width: 1199.5px) and (orientation: landscape) {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
@@ -106,7 +106,7 @@
       @include tablet {
         margin-bottom: 40px;
       }
-      @media screen and (max-width: 1199px) and (orientation: landscape) {
+      @media screen and (max-width: 1199.5px) and (orientation: landscape) {
         font-size: 20px;
       }
       @include desktop {
@@ -456,7 +456,7 @@
   &__descr {
     margin: auto 0;
     padding-top: 27px;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.5px) {
       display: none;
     }
   }
