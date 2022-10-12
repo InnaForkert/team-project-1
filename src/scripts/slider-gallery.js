@@ -21,13 +21,9 @@ const sliderGallery = () => {
     slides[slideIndex - 1].style.display = 'block';
   }
 
-  function plusSlides(n) {
-    showSlides((slideIndex += n));
-  }
-
   setInterval(() => {
-    plusSlides(1);
-  }, 7000);
+    showSlides((slideIndex += 1));
+  }, 5000);
 };
 
 sliderGallery();
