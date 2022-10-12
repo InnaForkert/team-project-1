@@ -1,5 +1,3 @@
-//Modal//
-
 .products__overflow {
   position: fixed;
   top: 0;
@@ -36,7 +34,7 @@
 
     &:hover,
     &:focus {
-      cursor: pointer;
+      cursor: $cursor-dark;
       fill: currentColor;
     }
 
@@ -59,7 +57,7 @@
 
     @include tablet {
       padding: 32px 40px;
-      max-width: 569px;
+      max-width: 568px;
     }
   }
 }
@@ -117,6 +115,14 @@
     margin-top: -10px;
   }
 }
+.products__modal-block {
+  width: 100%;
+
+  @include tablet {
+    min-width: 368px;
+    padding: 0 40px;
+  }
+}
 
 .products__modal--subtitle {
   color: $black;
@@ -139,7 +145,7 @@
   line-height: 176%;
   justify-content: space-between;
   display: flex;
-  row-gap: 11px;
+  row-gap: 16px;
 }
 .modal--item--item {
   color: $black;
@@ -147,6 +153,113 @@
   line-height: 176%;
 }
 
-.bn-form {
+.products__modal-form {
   margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 12px;
+
+  // width: 224px;
+
+  .products__modal-input {
+    padding: 8px 12px;
+    width: 100%;
+    height: 42px;
+
+    background: rgba(248, 210, 78, 0.1);
+    border: 1px solid #84a178;
+    border-radius: 10px;
+
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.4;
+    /* or 17px */
+
+    color: $black;
+
+    &::placeholder {
+      color: $black;
+    }
+
+    @include tablet {
+      height: 42px;
+    }
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: $cubic-bezier;
+    cursor: $cursor-dark;
+    &:hover {
+      border-color: rgb(27, 74, 27);
+    }
+  }
+
+  .products__modal-comment {
+    margin-bottom: 12px;
+    display: block;
+    padding: 8px 12px;
+    width: 100%;
+    height: 64px;
+
+    background: rgba(248, 210, 78, 0.1);
+    border: 1px solid #84a178;
+    border-radius: 10px;
+
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: $black;
+    @include tablet {
+      width: 100%;
+      height: 84px;
+    }
+
+    &::placeholder {
+      color: $black;
+    }
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: $cubic-bezier;
+    cursor: $cursor-dark;
+    &:hover {
+      border-color: rgb(27, 74, 27);
+    }
+  }
+}
+
+.products__modal-button {
+  padding: 12px 34px;
+  margin-bottom: 0;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+  // display: flex;
+  // align-items: center;
+  text-align: center;
+
+  color: $black;
+
+  background: $accent-color;
+  border-radius: 10px;
+  border: none;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: $cubic-bezier;
+  cursor: $cursor-dark;
+
+  &:hover {
+    background-color: $dark-green;
+  }
+
+  &:focus {
+    background-color: $dark-green;
+  }
 }
