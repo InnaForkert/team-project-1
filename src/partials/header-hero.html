@@ -2,21 +2,20 @@
   <div class="container">
     <a href="#home" class="logo__link">
             <img src="./images/logo-icon.png" alt="logo" class="logo-icon">
-
     </a>
     <nav class="nav" data-menu>
       <ul class="nav__list">
         <li class="nav__item">
-          <a href="#home" class="nav__link" data-nav-link>Home</a>
+          <a href="https://innaforkert.github.io/team-project-1/#home" class="nav__link" data-nav-link name="home">Home</a>
         </li>
         <li class="nav__item">
-          <a href="#about" class="nav__link" data-nav-link>How it’s made?</a>
+          <a href="https://innaforkert.github.io/team-project-1/#about" class="nav__link" data-nav-link name="about">How it’s made?</a>
         </li>
         <li class="nav__item">
-          <a href="#products" class="nav__link" data-nav-link>Our products</a>
+          <a href="https://innaforkert.github.io/team-project-1/#products" class="nav__link" data-nav-link name="products">Our products</a>
         </li>
         <li class="nav__item">
-          <a href="#contacts" class="nav__link" data-nav-link>Contact</a>
+          <a href="https://innaforkert.github.io/team-project-1/#contacts" class="nav__link" data-nav-link name="contact">Contact</a>
         </li>
       </ul>
       <button
@@ -24,6 +23,7 @@
         class="primary-btn header__btn"
         data-buy-mobile-open
         data-nav-link
+        name="buy now"
       >
         Buy now
         <svg class="arrow-icon">
@@ -31,10 +31,10 @@
         </svg>
       </button>
     </nav>
-    <button type="button" class="nav__btn" data-menu-button>
+    <button type="button" class="nav__btn" data-menu-button name="open mobile menu">
       <svg
         class="nav__icon"
-        aria-label="Вмикач мобільного меню"
+        aria-label="open mobile menu"
         width="32"
         height="32"
       >
@@ -46,6 +46,7 @@
       type="button"
       class="primary-btn header__tablet-btn"
       data-buy-desktop-open
+      name="buy now"
     >
       Buy now
       <svg class="arrow-icon">
@@ -60,8 +61,8 @@
       ice cream made with <span class="hero__heading--accent">passion</span>
     </h1>
     <div class="hero__buttons animate__animated animate__backInLeft">
-      <a href="#products" class="adaptive-btn">Products</a>
-      <a href="#about" class="hero__link">How it's made?</a>
+      <a href="#products" class="adaptive-btn" name="products">Products</a>
+      <a href="#about" class="hero__link" name="about">How it's made?</a>
     </div>
     <div class="hero__imgs">
       <svg class="hero__dots">
@@ -131,7 +132,7 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et
         </p>
-        <a href="#" class="hero__arrows">
+        <a href="#" class="hero__arrows" name="about">
           <svg class="hero__arrow">
             <use href="./images/sprite.svg#icon-arrow-1"></use>
           </svg>
@@ -155,6 +156,7 @@
   id="myBtn"
   title="Go to top"
   class="adaptive-btn"
+  name="go to top"
 >
   ↑ To top
 </button>
