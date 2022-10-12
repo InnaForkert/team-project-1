@@ -1,0 +1,63 @@
+<div class="backdrop is-hidden" data-contacts-franchise-overlay>
+  <div class="contacts__franchise-modal" data-contacts-franchise-modal>
+    <svg
+      class="modal__close-icon"
+      width="16"
+      height="16"
+      data-contacts-franchise-close
+    >
+      <use href="./images/sprite.svg#icon-cross"></use>
+    </svg>
+    <h2 class="contacts__franchise-modal-header">
+      Thank you for your interest in owning an Ice Cream shop
+    </h2>
+    <p class="contacts__franchise-modal-text">
+      Due to the overwhelming volume of franchise requests we are not accepting
+      new franchisee applications at this time. Once the application process
+      resumes, we will contact you for further information. Please fill out the
+      contact information below and we will reach out for additional
+      information. We appreciate your patience.
+    </p>
+    <form action="" class="franchise__order-form">
+      <label class="franchise__input">
+        <input
+          type="text"
+          name="username"
+          autofocus
+          class="franchise__input-style"
+          required
+          placeholder="Name"
+        />
+      </label>
+      <label class="franchise__input">
+        <input
+          type="tel"
+          name="phone"
+          class="franchise__input-style"
+          required
+          placeholder="Phone"
+        />
+      </label>
+      <label class="franchise__input">
+        <input
+          type="email"
+          name="email"
+          class="franchise__input-style"
+          required
+          placeholder="Email"
+        />
+      </label>
+      <label class="franchise__input">
+        <textarea
+          name="feedback"
+          rows="5"
+          placeholder="Comment"
+          class="franchise__input-textarea"
+        ></textarea>
+      </label>
+      <div class="contacts__modal-location--button-pos">
+        <button type="submit" class="primary-btn">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

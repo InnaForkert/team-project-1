@@ -16,6 +16,10 @@
   & .container {
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 1199px) and (orientation: landscape) {
+      align-items: flex-start;
+    }
   }
 
   &__btn {
@@ -24,6 +28,9 @@
 
     @include tablet {
       display: none;
+    }
+    @media screen and (max-width: 1199px) and (orientation: landscape) {
+      margin-right: 30px;
     }
   }
 
@@ -48,7 +55,7 @@
     width: 100vw;
     height: 100vh;
     touch-action: none;
-    z-index: 99;
+    z-index: 3;
 
     padding-top: 100px;
     transform: translateX(100%);
@@ -60,9 +67,13 @@
   }
 
   @media screen and (max-width: 767px) {
-    padding-top: 140px;
+    padding-top: 100px;
 
     background-color: $tablet-menu-green;
+  }
+  @media screen and (max-width: 1199px) and (orientation: landscape) {
+    padding-inline: 20px;
+    padding-top: 15%;
   }
 
   &.is-open {
@@ -70,6 +81,12 @@
   }
 
   &__list {
+    @media screen and (max-width: 1199px) and (orientation: landscape) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
     @include desktop {
       display: flex;
       gap: 27px;
@@ -89,7 +106,9 @@
       @include tablet {
         margin-bottom: 40px;
       }
-
+      @media screen and (max-width: 1199px) and (orientation: landscape) {
+        font-size: 20px;
+      }
       @include desktop {
         margin-bottom: 0;
       }
@@ -111,6 +130,7 @@
 
   &__link {
     padding-block: 15px;
+    transition: color 200ms ease-in-out;
 
     &:hover,
     &:focus {
@@ -130,7 +150,7 @@
 
     border: none;
     background-color: transparent;
-    z-index: 999;
+    z-index: 3;
     cursor: $cursor-dark;
     transform: translateX(0);
 
@@ -175,12 +195,18 @@
 }
 
 .logo {
+  &__link{
+    margin-right: auto;
+  }
+
   &__icon {
     position: relative;
+
+
     width: 40px;
     height: 37px;
     fill: $accent-color;
-    z-index: 9999;
+    z-index: 55;
 
     @include tablet {
       width: 48px;
@@ -202,10 +228,10 @@
 
   & .container {
     position: relative;
-    height: 450px;
+    height: 390px;
 
     @include tablet {
-      height: 349px;
+      height: 332px;
     }
 
     @include desktop {
@@ -214,7 +240,7 @@
   }
 
   @include tablet {
-    padding-top: 40px;
+    padding-top: 36px;
   }
 
   @include desktop {
@@ -243,10 +269,20 @@
     margin-bottom: 32px;
 
     font-size: 26px;
+    font-weight: 400;
     letter-spacing: 0.04em;
     line-height: calc(33 / 26);
     font-family: $heading-font;
     text-transform: uppercase;
+    &--accent {
+      font-size: 34px;
+      @include tablet {
+        font-size: 24px;
+      }
+      @include desktop {
+        font-size: 38px;
+      }
+    }
 
     @include tablet {
       max-width: 181px;
@@ -275,6 +311,7 @@
     letter-spacing: normal;
 
     color: $accent-color;
+    transition: color 250ms ease-in-out;
 
     &:hover {
       color: $dark-green;
@@ -298,7 +335,8 @@
     width: 49%;
     max-width: 157px;
 
-    filter: drop-shadow(0 0 26.8px rgba(252, 252, 252, 0.44));
+    filter: drop-shadow(0 0 30px rgba(252, 252, 252, 0.44))
+      drop-shadow(0 0 20px rgba(252, 252, 252, 0.44));
 
     @include tablet {
       right: 80px;
@@ -316,12 +354,12 @@
     bottom: 0;
     right: 0;
 
-    height: 11.1%;
     max-height: 50px;
     width: 100%;
     max-width: 320px;
 
     fill: $accent-color;
+    pointer-events: none;
 
     @include tablet {
       display: none;
@@ -338,6 +376,7 @@
 
       fill: $accent-color;
       z-index: 0;
+      pointer-events: none;
 
       @include tablet-only {
         display: block;
@@ -395,32 +434,41 @@
       line-height: calc(20 / 14);
     }
   }
+  &__arrows {
+    padding-block: 15px;
+    display: flex;
+    align-items: baseline;
+    transition: padding-bottom 200ms linear;
+
+    &:hover {
+      padding-bottom: 11px;
+    }
+    &:hover .hero__arrow {
+      width: 50px;
+      height: 19px;
+    }
+    &:focus .hero__arrow {
+      stroke-width: 2px;
+    }
+  }
   &__arrow {
     fill: $white;
     width: 40px;
     height: 15px;
+
+    transition: width 200ms linear, height 200ms linear;
   }
 
   &__descr {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: flex-end;
-
-    padding-bottom: 17px;
-
+    margin: auto 0;
+    padding-top: 27px;
     @media screen and (max-width: 767px) {
       display: none;
-    }
-
-    @include desktop {
-      justify-content: center;
-      gap: 32px;
     }
   }
   &__numbers {
     position: absolute;
-    top: 26px;
+    top: -10px;
     right: 32px;
 
     display: none;
@@ -431,6 +479,7 @@
     font-weight: 400;
     font-size: 8px;
     line-height: calc(10 / 8);
+    letter-spacing: normal;
 
     @include tablet {
       display: block;
@@ -468,4 +517,17 @@
       font-size: 46px;
     }
   }
+}
+
+//to top btn
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 999;
+  @extend %btn;
+  padding: 10px;
+
+  background-color: $accent-color;
 }

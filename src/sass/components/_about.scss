@@ -1,352 +1,243 @@
 .about {
-    padding: 60px 0;
-    background: $main-color;
-    text-align: center;
+  padding: 60px 0;
+  background: $main-color;
+  text-align: center;
+
+  @include tablet {
+    padding-bottom: 40px;
+  }
+
+  @include desktop {
+    padding-bottom: 86px;
+  }
+
+  .about__uppertitle {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: calc(22 / 18);
 
     @include tablet {
-        padding-bottom: 40px;
+      font-weight: 800;
+      font-size: 22px;
     }
 
     @include desktop {
-        padding-bottom: 86px;
+      font-size: 30px;
+      line-height: calc(37 / 30);
+      font-weight: 800;
+    }
+  }
+
+  .about__title {
+    text-transform: uppercase;
+    font-family: $heading-font;
+    font-size: 30px;
+    line-height: calc(38 / 30);
+    margin-top: 12px;
+
+    @include tablet {
+      font-size: 34px;
+      letter-spacing: 0.06em;
     }
 
-    .about__uppertitle {
-        text-transform: uppercase;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: calc(22/18);
+    @include desktop {
+      font-size: 36px;
+      line-height: calc(45 / 36);
+      font-weight: 400;
+    }
+  }
 
-        @include tablet {
-            font-weight: 800;
-            font-size: 22px;
-        }
-
-        @include desktop {
-            font-size: 30px;
-            line-height: calc(37/30);
-            font-weight: 800;
-        }
+  .about__block {
+    @include tablet {
+      display: flex;
+      gap: 32px;
+      margin-top: 72px;
     }
 
-    .about__title {
-        text-transform: uppercase;
-        font-family: $heading-font;
-        font-size: 30px;
-        line-height: calc(38/30);
-        margin-top: 12px;
-
-        @include tablet {
-            font-size: 34px;
-            letter-spacing: 0.06em;
-        }
-
-        @include desktop {
-            font-size: 36px;
-            line-height: calc(45/36);
-            font-weight: 400;
-        }
+    @include desktop {
+      gap: 100px;
     }
 
-    .about__block {
-        @include tablet {
-            display: flex;
-            gap: 32px;
-            margin-top: 72px;
-        }
+    @include desktop {
+      align-items: center;
+    }
+  }
 
-        @include desktop {
-            gap: 100px;
-        }
+  .about__bg {
+    margin-top: 32px;
+    display: inline-block;
+    background-image: linear-gradient(
+        to right,
+        rgba(248, 210, 78, 0.7),
+        rgba(248, 210, 78, 0.7)
+      ),
+      linear-gradient(to right, $grey-dot, $grey-dot);
+    border-radius: 50%;
 
-        @include desktop {
-            align-items: center;
-        }
+    @include tablet {
+      width: 336px;
     }
 
-    .about__bg {
-        margin-top: 32px;
-        display: inline-block;
-        background-image: linear-gradient(to right, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), linear-gradient(to right, $grey-dot, $grey-dot);
-        border-radius: 50%;
+    @include desktop {
+      width: 490px;
+    }
+  }
 
-        @include tablet {
-            width: 336px;
-        }
+  .about__img {
+    margin-top: 21px;
 
-        @include desktop {
-            width: 490px;
-        }
+    @include tablet {
+      width: 336px;
     }
 
-    .about__img {
-        margin-top: 21px;
+    @include desktop {
+      width: 490px;
+    }
+  }
 
-        @include tablet {
-            width: 336px;
-        }
+  .about__wrapper {
+    margin-top: 40px;
 
-        @include desktop {
-            width: 490px;
-        }
+    @include tablet {
+      width: 336px;
+      text-align: start;
     }
 
-    .about__wrapper {
-        margin-top: 40px;
+    @include desktop {
+      width: 463px;
+    }
+  }
 
-        @include tablet {
-            width: 336px;
-            text-align: start;
-        }
+  .about__text {
+    font-size: 12px;
+    line-height: calc(21 / 12);
 
-        @include desktop {
-            width: 463px;
-        }
+    &:last-of-type {
+      display: none;
     }
 
-    .about__text {
-        font-size: 12px;
-        line-height: calc(21/12);
-
-        &:last-of-type {
-            display: none;
-        }
-
-        &:not(:first-child) {
-            margin-top: 4px;
-        }
-        
-
-        @include tablet {
-            &:not(:first-child) {
-                margin-top: 8px;
-            }
-            &:last-of-type {
-                display: block;
-            }
-        }
-
-        @include desktop {
-            font-size: 16px;
-            line-height: calc(28/16);
-
-            &:not(:first-child) {
-                font-size: 14px;
-                line-height: calc(27/14);
-            }
-            &:last-of-type {
-                display: block;
-            }
-        }
+    &:not(:first-child) {
+      margin-top: 4px;
     }
 
-    .about__btn {
-        margin-top: 20px;
-
-        @include tablet {
-            margin-top: 48px;
-        }
+    @include tablet {
+      &:not(:first-child) {
+        margin-top: 8px;
+      }
+      &:last-of-type {
+        display: block;
+      }
     }
 
-    .about__list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 21px;
-        margin-top: 42px;
+    @include desktop {
+      font-size: 16px;
+      line-height: calc(28 / 16);
 
-        @include tablet {
-            flex-direction: row;
-            justify-content: space-around;
-            margin-top: 53px;
-        }
+      &:not(:first-child) {
+        font-size: 14px;
+        line-height: calc(27 / 14);
+      }
+      &:last-of-type {
+        display: block;
+      }
+    }
+  }
 
-        @include desktop {
-            gap: 32px;
-            margin-top: 60px;
-        }
+  .about__btn {
+    margin-top: 20px;
+
+    @include tablet {
+      margin-top: 48px;
+    }
+  }
+
+  .about__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 21px;
+    margin-top: 42px;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 53px;
     }
 
-    .about__item {
+    @include desktop {
+      gap: 32px;
+      margin-top: 60px;
+    }
+  }
 
-        @include tablet {
-            width: 152px;
-        }    
-        
-        @include desktop {
-            width: 368px;
-        } 
+  .about__item {
+    @include tablet {
+      width: 152px;
     }
 
-    .about__svg-bg {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        height: 50px;
-        width: 50px;
-        border: 1px solid black;
-        border-radius: 50%;
-        background-color: $accent-color;
-        border: none;
+    @include desktop {
+      width: 368px;
+    }
+  }
+
+  .about__svg-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: $accent-color;
+    border: none;
+  }
+
+  .about__icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .about__undertitle {
+    font-family: $advantages-font;
+    font-size: 36px;
+    margin-top: 16px;
+    letter-spacing: 0.04em;
+    line-height: calc(42 / 36);
+
+    @include tablet {
+      font-size: 48px;
+      line-height: calc(59 / 48);
+      margin-top: 32px;
+      font-family: $main-font;
     }
 
-    .about__icon {
-        width: 36px;
-        height: 36px;
+    @include desktop {
+      font-size: 58px;
+      font-family: $main-font;
+      line-height: calc(71 / 58);
+      margin-top: 40px;
+    }
+  }
+
+  .about__description {
+    font-weight: 700;
+    font-size: 12px;
+    margin-top: 18px;
+    line-height: calc(20 / 12);
+
+    @include tablet {
+      font-size: 14px;
+      line-height: calc(24 / 14);
+      font-weight: 400;
+      margin-top: 16px;
     }
 
-    .about__undertitle {
-        font-family: $advantages-font;
-        font-size: 36px;
-        margin-top: 16px;
-        letter-spacing: 0.04em;
-        line-height: calc(42/36);
-
-        @include tablet {
-            font-size: 48px;
-            line-height: calc(59/48);
-            margin-top: 32px;
-            font-family: $main-font;
-        }
-
-        @include desktop {
-            font-size: 58px;
-            font-family: $main-font;
-            line-height: calc(71/58);
-            margin-top: 40px;
-        }
+    @include desktop {
+      font-size: 16px;
+      line-height: calc(28 / 16);
+      margin-top: 16px;
     }
-
-    .about__description {
-        font-weight: 700;
-        font-size: 12px;
-        margin-top: 18px;
-        line-height: calc(20/12);
-
-        @include tablet {
-            font-size: 14px;
-            line-height: calc(24/14);
-            font-weight: 400;
-            margin-top: 16px;
-        }
-
-        @include desktop {
-            font-size: 16px;
-            line-height: calc(28/16);
-            margin-top: 16px;
-        }
-    }
-
-    //modal
-
-    .about__overflow {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,.2);
-        opacity: 1;
-        transition: opacity 500ms $cubic-bezier;
-
-        .about__modal-btn {
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            padding: 0;
-            display: block;
-            width: 20px;
-            height: 20px;
-            border: none;
-            background: none;
-            color: $accent-color;
-
-            @include tablet {
-                top: 20px;
-                right: 20px;
-             }
-        }
-
-        .about__modal-icon {
-            width: 16px;
-            height: 16px;
-
-            transition: fill 250ms $cubic-bezier;
-
-            &:hover,
-            &:focus {
-                cursor: pointer;
-                fill: currentColor;
-            }
-
-            @include tablet {
-                width: 20px;
-                height: 20px;
-             }
-        }
-
-        .about__modal {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            min-width: 320px;
-            border: 1px solid $accent-color;
-            border-radius: 10px;
-            background: $white;
-            padding: 28px;
-
-            @include tablet {
-                padding: 32px 60px;
-                max-width: 569px;
-            }
-        }
-
-        .about__modal-title {
-            color: $black;
-            font-family: $heading-font;
-            font-size: 16px;
-            line-height: calc(24/16);
-
-            @include tablet {
-                font-size: 20px;
-                line-height: calc(28/20);
-            }
-        }
-
-        .about__modal-video {
-            width: 100%;
-            min-height: 199px;
-            margin-top: 20px;
-            background: $black;
-            border: 1px solid $black;
-            border-radius: 10px;
-
-            @include tablet {
-                margin-top: 32px;
-                max-height: 205px;
-                width: 448px;
-            }
-        }
-
-        .about__modal-text {
-            margin-top: 20px;
-            line-height: calc(20/14);
-            font-size: 14px;
-            color: $black;
-            font-family: $main-font;
-
-            @include tablet {
-                margin-top: 32px;
-                font-size: 16px;
-                line-height: calc(22/16);
-             }
-        }
-    }
-
-    .is-hidden {
-        opacity: 0;
-        pointer-events: none;
-    }
+  }
 }

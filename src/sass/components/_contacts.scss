@@ -22,6 +22,10 @@
     );
   }
 
+  &__btn {
+    min-width: 196px;
+  }
+
   @include desktop {
     font-size: 16px;
     line-height: 1.83;
@@ -36,13 +40,6 @@
     );
   }
 }
-
-// .contacts::before {
-//   display: block;
-//   content: ' ';
-//   height: 120px;
-//   background: transparent;
-// }
 
 .contacts__title {
   font-size: 0px;
@@ -71,6 +68,8 @@
 
   padding: 40px 32px;
   border-radius: 24px;
+
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
 
   &:not(:last-child) {
     margin-bottom: 20px;
@@ -159,68 +158,6 @@
   &:not(:last-child) {
     margin-bottom: 16px;
   }
-}
-
-.contacts__buttons-item--locations {
-  // background-color: $accent-color;
-  // border-color: transparent;
-
-  // font-size: 14px;
-  // line-height: 129%;
-  // font-weight: 600;
-
-  width: 196px;
-  height: 42px;
-  // border-radius: 10px;
-  // padding: 0 34px;
-
-  // transition-property: color, background-color;
-  // transition-duration: 250ms;
-  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  // &:hover {
-  //   background-color: $dark-green;
-  // }
-
-  // &:focus {
-  //   background-color: $dark-green;
-  //   color: $white;
-  // }
-
-  // &:disabled {
-  //   background-color: $grey-text;
-  // }
-}
-
-.contacts__buttons-item--franchise {
-  // background-color: transparent;
-  // border-color: $accent-color;
-
-  // font-size: 14px;
-  // line-height: 129%;
-  // font-weight: 600;
-
-  width: 196px;
-  height: 42px;
-  // border-radius: 10px;
-  // padding: 0 34px;
-
-  // transition-property: color, border-color;
-  // transition-duration: 250ms;
-  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  // &:hover {
-  //   border-color: $dark-green;
-  // }
-
-  // &:focus {
-  //   border-color: $dark-green;
-  //   color: $white;
-  // }
-
-  // &:disabled {
-  //   border-color: $grey-text;
-  // }
 }
 
 //extra sryle
