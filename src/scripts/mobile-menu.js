@@ -10,7 +10,7 @@
     menuBtnRef.setAttribute('aria-expanded', !expanded);
 
     mobileMenuRef.classList.toggle('is-open');
-  });
+  }, {passive: true});
 
   const mobileMenuLinks = document.querySelectorAll('[data-nav-link]');
 
@@ -18,7 +18,7 @@
     link.addEventListener('click', () => {
       menuBtnRef.classList.remove('is-open');
       mobileMenuRef.classList.remove('is-open');
-    });
+    }, {passive: true});
   };
 
   mobileMenuLinks.forEach(link => addEvt(link));

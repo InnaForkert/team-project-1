@@ -8,20 +8,20 @@ const openModalBM = function () {
   overlayBM.classList.remove('is-hidden');
 };
 
-openModalBtnBM.addEventListener('click', openModalBM);
+openModalBtnBM.addEventListener('click', openModalBM, {passive: true});
 
 const closeModalBM = function () {
   modalBM.classList.add('is-hidden');
   overlayBM.classList.add('is-hidden');
 };
 
-closeModalBtnBM.addEventListener('click', closeModalBM);
+closeModalBtnBM.addEventListener('click', closeModalBM, {passive: true});
 
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modalBM.classList.contains('is-hidden')) {
     closeModalBM();
   }
-});
+}, {passive: true});
 
 ///desktop
 const modalBD = document.querySelector('[data-buy-desktop-modal]');
@@ -34,14 +34,14 @@ const openModalBD = function () {
   overlayBD.classList.remove('is-hidden');
 };
 
-openModalBtnBD.addEventListener('click', openModalBD);
+openModalBtnBD.addEventListener('click', openModalBD, {passive: true});
 
 const closeModalBD = function () {
   modalBD.classList.add('is-hidden');
   overlayBD.classList.add('is-hidden');
 };
 
-closeModalBtnBD.addEventListener('click', closeModalBD);
+closeModalBtnBD.addEventListener('click', closeModalBD, {passive: true});
 
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modalBD.classList.contains('is-hidden')) {
