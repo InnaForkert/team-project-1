@@ -230,7 +230,6 @@
       }
       @include desktop {
         padding-top: 166px;
-        margin-bottom: 65px;
         font-size: 30px;
         line-height: 37px;
       }
@@ -242,53 +241,58 @@
       line-height: 176%;
       letter-spacing: 0.04em;
       color: $black;
-      margin: 40px 40px 90px 40px;
+      font-size: 14px;
+      padding: 40px 40px 0 40px;
 
       @include tablet {
-        margin: 40px 20px 0 20px;
+        padding: 40px 26px 0 26px;
       }
 
       @include desktop {
         font-size: 16px;
-        margin: 65px 63px 0 63px;
+        padding: 65px 64px 0 64px;
       }
     }
 
-    &__link {
-      &:hover .products__icon {
-        width: 50px;
+    &__button {
+      border: none;
+      background-color: transparent;
+      position: absolute;
+      top: 380px;
+      margin: 0 42%;
+      transition-property: width;
+      transition-duration: 255ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+      @include tablet {
+        top: 400px;
+        margin: 0 39%;
       }
-      &:focus .products__icon {
-        width: 60px;
+
+      @include desktop {
+        top: 480px;
+        margin: 0 44%;
+      }
+      &:hover {
+        cursor: $cursor-dark;
+      }
+      &:focus {
+        cursor: $cursor-dark;
       }
     }
   }
+
   .products__icon {
     width: 40px;
     height: 24px;
-    display: inline-block;
-    margin-left: 44%;
-    margin-left: 44%;
-    margin-bottom: 20px;
     transition-property: width;
     transition-duration: 255ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-    @include tablet {
-      top: 98px;
-      margin-left: 44%;
-      margin-left: 44%;
-      margin-top: 134%;
-      position: absolute;
-      margin-bottom: 0;
+    &:hover {
+      width: 50px;
     }
-
-    @include desktop {
-      margin-bottom: 0;
-      margin-left: 44%;
-      margin-left: 45%;
-      margin-top: 100%;
-      position: absolute;
+    &:focus {
+      width: 60px;
     }
   }
 }

@@ -35,6 +35,7 @@
               alt="ice cream"
               class="item__img"
               width="201"
+              loading="lazy"
             />
           </picture>
         </div>
@@ -43,10 +44,10 @@
           Soft ice cream with a delicate taste. Made with milk, cream, sugar and
           natural stabilizer
         </p>
-        <a href="" class="item__link" name="recipe">
+        <button class="item__button products__btn" name="recipe">
           <svg class="products__icon">
             <use href="./images/sprite.svg#icon-arrow-2"></use></svg
-        ></a>
+        ></button>
       </li>
       <li data-aos="fade-up" class="products__item--ice-coffee">
         <div class="item__wrapper--ice-coffee">
@@ -80,6 +81,8 @@
               alt="ice cream"
               class="item__img"
               width="201"
+              loading="lazy"
+
             />
           </picture>
         </div>
@@ -88,10 +91,12 @@
           Fragrant invigorating drink created from 100% natural ingredients
           without the use of preservatives and flavor enhancers
         </p>
-        <a href="" class="item__link" name="recipe">
+
+        <button class="item__button products__btn" name="recipe">
+
           <svg class="products__icon">
             <use href="./images/sprite.svg#icon-arrow-2"></use></svg
-        ></a>
+        ></button>
       </li>
 
       <li data-aos="fade-up" class="products__item--milkshakes">
@@ -126,6 +131,8 @@
               alt="ice cream"
               class="item__img"
               width="201"
+              loading="lazy"
+
             />
           </picture>
         </div>
@@ -134,11 +141,96 @@
           Sweet drinks based on milk and ice cream, supplemented with syrups,
           fruits, berries and other sweets of your choice
         </p>
-        <a href="" class="item__link" name="recipe">
+
+        <button class="item__button products__btn" name="recipe">
+
           <svg class="products__icon">
             <use href="./images/sprite.svg#icon-arrow-2"></use></svg
-        ></a>
+        ></button>
       </li>
     </ul>
   </div>
+
+  <section id="products__modal" class="products__overflow is-hidden">
+    <div class="products__modal">
+      <button type="button" class="products__modal-btn">
+        <svg class="products__modal-icon">
+          <use href="./images/sprite.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <h2 class="products__modal-title">Chololate icecream</h2>
+      <div class="products__modal--wrapper">
+        <picture>
+          <source
+            media="(min-width: 320px)"
+            srcset="
+              ./images/products/products-modal-mobile1.png    1x,
+              ./images/products/products-modal-mobile2.png 2x
+            "
+            type="image/png"
+          />
+          <source
+            media="(min-width: 767px)"
+            srcset="
+              ./images/products/products-modal-tablet-desctop1.png    1x,
+              ./images/products/products-modal-tablet-desctop2.png 2x
+            "
+            type="image/png"
+          />
+          <source
+            media="(min-width: 1199px)"
+         srcset="
+              ./images/products/products-modal-tablet-desctop1.png    1x,
+              ./images/products/products-modal-tablet-desctop2.png 2x
+            "
+            type="image/png"
+          />
+          <img src="./images/products/products-modal-mobile1.png" alt="ice cream" class="products__modal--image" width="130">
+        </picture>
+      </div>
+      <h3 class="products__modal--subtitle">Ingredients</h3>
+      <ul class="products__modal-list">
+        <li class="products__modal--item">Milk<span class="modal--item--item">100ml</span></li>
+        <li class="products__modal--item">Belgian chocolate<span class="modal--item--item">20g</span></li>
+        <li class="products__modal--item">Cream<span class="modal--item--item">150 ml</span></li>
+        <li class="products__modal--item">Cocoa powder<span class="modal--item--item"> 30g</span></li>
+        <li class="products__modal--item">Sugar<span class="modal--item--item">40g</span></li>
+        <li class="products__modal--item">Vanilla sugar<span class="modal--item--item">10g</span></li>
+      </ul>
+      <form action="" class="bn-form">
+        <div class="bn-block">
+          <input
+            type="text"
+            name="name"
+            id="bn-name"
+            placeholder="Name"
+            class="bn-input"
+            required
+          />
+        </div>
+        <div class="bn-block">
+          <input
+            type="tel"
+            name="tel"
+            id="bn-tel"
+            placeholder="Phone"
+            class="bn-input"
+            required
+          />
+        </div>
+        <div class="bn-block">
+          <textarea
+            name="comment"
+            id="bn-comment"
+            rows="10"
+            placeholder="Comment"
+            class="bn-comment"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="bn-button">Submit</button>
+      </form>
+      </p>
+    </div>
+  </section>
 </section>
