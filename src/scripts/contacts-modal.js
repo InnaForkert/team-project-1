@@ -10,21 +10,21 @@ const openModalCL = function () {
   overlayCL.classList.remove('is-hidden');
 };
 
-openModalBtnCL.addEventListener('click', openModalCL);
+openModalBtnCL.addEventListener('click', openModalCL, {passive: true});
 
 const closeModalCL = function () {
   modalCL.classList.add('is-hidden');
   overlayCL.classList.add('is-hidden');
 };
 
-closeModalBtnCL.addEventListener('click', closeModalCL);
+closeModalBtnCL.addEventListener('click', closeModalCL, {passive: true});
 
 
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modalCL.classList.contains('is-hidden')) {
     closeModalCL();
   }
-});
+}, {passive: true});
 
 ///desktop
 const modalCF = document.querySelector('[data-contacts-franchise-modal]');
@@ -39,17 +39,17 @@ const openModalCF = function () {
   overlayCF.classList.remove('is-hidden');
 };
 
-openModalBtnCF.addEventListener('click', openModalCF);
+openModalBtnCF.addEventListener('click', openModalCF, {passive: true});
 
 const closeModalCF = function () {
   modalCF.classList.add('is-hidden');
   overlayCF.classList.add('is-hidden');
 };
 
-closeModalBtnCF.addEventListener('click', closeModalCF);
+closeModalBtnCF.addEventListener('click', closeModalCF, {passive: true});
 
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modalCF.classList.contains('is-hidden')) {
     closeModalCF();
   }
-});
+}, {passive: true});
