@@ -195,8 +195,14 @@
 }
 
 .logo {
+  &__link{
+    margin-right: auto;
+  }
+
   &__icon {
     position: relative;
+
+
     width: 40px;
     height: 37px;
     fill: $accent-color;
