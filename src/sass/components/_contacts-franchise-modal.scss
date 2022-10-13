@@ -19,6 +19,7 @@
   overflow-y: scroll;
 
   @include desktop {
+    overflow-y: visible;
     max-height: 568px;
   }
 
@@ -32,6 +33,7 @@
   width: 100%;
 
   @include tablet {
+    overflow-y: visible;
     padding: 30px 60px;
 
     max-width: 568px;
@@ -67,7 +69,6 @@
   line-height: 1.4;
   margin-bottom: 24px;
 }
-
 
 .contacts__modal-location--button-pos {
   letter-spacing: normal;
@@ -117,7 +118,8 @@
 .modal__close-icon {
   cursor: $cursor-dark;
   transition: fill 250ms ease-in-out;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     fill: $accent-color;
   }
 }
