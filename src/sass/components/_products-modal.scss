@@ -56,6 +56,8 @@
     border-radius: 10px;
     background: $white;
     padding: 28px 20px 32px;
+    height: 100%;
+    overflow-y: scroll;
 
     @include tablet {
       padding: 32px 40px;
