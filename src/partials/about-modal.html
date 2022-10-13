@@ -1,18 +1,27 @@
 <section class="about__overflow is-hidden">
-    <div class="about__modal">
-        <button type="button" class="about__modal-btn" name="close">
-            <svg class="about__modal-icon">
-                <use href="./images/sprite.svg#icon-cross"></use>
-            </svg>
-        </button>
-        <h3 class="about__modal-title">How it’s made?</h3>
-        <iframe src="https://www.youtube.com/embed/h3uBr0CCm58" 
-                title="YouTube video player" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen class="about__modal-video">
-        </iframe>
-        <p class="about__modal-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-        </p>
-    </div>
+  <div class="about__modal">
+    <button type="button" class="about__modal-btn" name="close">
+      <svg class="about__modal-icon">
+        <use href="./images/sprite.svg#icon-cross"></use>
+      </svg>
+    </button>
+    <h3 class="about__modal-title">How it’s made?</h3>
+    <lite-youtube
+      videoid="h3uBr0CCm58"
+      playlabel="Play: Keynote (Google I/O '18)"
+    ></lite-youtube>
+    <!-- <iframe
+      src="https://www.youtube.com/embed/h3uBr0CCm58"
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      
+    >
+    </iframe> -->
+    <p class="about__modal-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+    </p>
+  </div>
 </section>
