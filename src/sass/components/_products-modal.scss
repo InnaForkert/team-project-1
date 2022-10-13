@@ -9,6 +9,7 @@
   opacity: 1;
   transition: opacity 500ms $cubic-bezier;
   overflow-y: scroll;
+  z-index: 998;
   @include tablet {
     max-height: 995px;
   }
