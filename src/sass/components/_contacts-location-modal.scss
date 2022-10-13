@@ -82,11 +82,11 @@
   background: none !important;
   width: 268px;
   height: 200px;
-  margin: 0 auto; 
+  margin: 0 auto;
 
   @include tablet {
     width: 448px;
-    height: 400px;
+    height: 300px;
   }
 }
 
