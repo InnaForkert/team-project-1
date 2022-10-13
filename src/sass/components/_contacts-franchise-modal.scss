@@ -19,6 +19,7 @@
   overflow-y: scroll;
 
   @include desktop {
+    overflow-y: visible;
     max-height: 568px;
   }
 
@@ -68,7 +69,6 @@
   margin-bottom: 24px;
 }
 
-
 .contacts__modal-location--button-pos {
   letter-spacing: normal;
 }
@@ -117,7 +117,8 @@
 .modal__close-icon {
   cursor: $cursor-dark;
   transition: fill 250ms ease-in-out;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     fill: $accent-color;
   }
 }
