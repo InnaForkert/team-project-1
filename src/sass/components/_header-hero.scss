@@ -16,9 +16,6 @@
   & .container {
     display: flex;
     align-items: center;
-    @media screen and (max-width: 1199.5px) and (orientation: landscape) {
-      overflow-y: scroll;
-    }
   }
 
   &__btn {
@@ -28,11 +25,6 @@
     @include tablet {
       display: none;
     }
-
-    // &:hover,
-    // &:focus {
-    //   background-color: $accent-color;
-    // }
   }
 
   &__tablet-btn {
