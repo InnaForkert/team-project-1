@@ -10,7 +10,7 @@
             href="https://innaforkert.github.io/team-project-1/#home"
             class="nav__link"
             data-nav-link
-            name="home"
+            aria-label="home"
             >Home</a
           >
         </li>
@@ -19,7 +19,7 @@
             href="https://innaforkert.github.io/team-project-1/#about"
             class="nav__link"
             data-nav-link
-            name="about"
+            aria-label="about"
             >How it’s made?</a
           >
         </li>
@@ -28,7 +28,7 @@
             href="https://innaforkert.github.io/team-project-1/#products"
             class="nav__link"
             data-nav-link
-            name="products"
+            aria-label="products"
             >Our products</a
           >
         </li>
@@ -37,7 +37,7 @@
             href="https://innaforkert.github.io/team-project-1/#contacts"
             class="nav__link"
             data-nav-link
-            name="contact"
+            aria-label="contact"
             >Contact</a
           >
         </li>
@@ -47,7 +47,7 @@
         class="primary-btn header__btn"
         data-buy-mobile-open
         data-nav-link
-        name="buy now"
+        aria-label="buy now"
       >
         Buy now
         <svg class="arrow-icon">
@@ -59,7 +59,7 @@
       type="button"
       class="nav__btn"
       data-menu-button
-      name="open mobile menu"
+      aria-label="open mobile menu"
     >
       <svg
         class="nav__icon"
@@ -75,7 +75,7 @@
       type="button"
       class="primary-btn header__tablet-btn"
       data-buy-desktop-open
-      name="buy now"
+      aria-label="buy now"
     >
       Buy now
       <svg class="arrow-icon">
@@ -90,8 +90,10 @@
       ice cream made with <span class="hero__heading--accent">passion</span>
     </h1>
     <div class="hero__buttons animate__animated animate__backInLeft">
-      <a href="#products" class="adaptive-btn" name="products">Products</a>
-      <a href="#about" class="hero__link" name="about">How it's made?</a>
+      <a href="#products" class="adaptive-btn" aria-label="products"
+        >Products</a
+      >
+      <a href="#about" class="hero__link" aria-label="about">How it's made?</a>
     </div>
     <div class="hero__imgs">
       <svg class="hero__dots">
@@ -161,7 +163,7 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et
         </p>
-        <a href="#" class="hero__arrows" name="about">
+        <a href="#" class="hero__arrows" aria-label="about">
           <svg class="hero__arrow">
             <use href="./images/sprite.svg#icon-arrow-1"></use>
           </svg>
@@ -185,7 +187,7 @@
   id="myBtn"
   title="Go to top"
   class="adaptive-btn"
-  name="go to top"
+  aria-label="go to top"
 >
   ↑ To top
 </button>
