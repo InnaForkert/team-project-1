@@ -16,9 +16,9 @@
   & .container {
     display: flex;
     align-items: center;
-     @media screen and (max-width: 1199.5px) and (orientation: landscape) {
+    @media screen and (max-width: 1199.5px) and (orientation: landscape) {
       overflow-y: scroll;
-     }
+    }
   }
 
   &__btn {
@@ -29,6 +29,10 @@
       display: none;
     }
 
+    // &:hover,
+    // &:focus {
+    //   background-color: $accent-color;
+    // }
   }
 
   &__tablet-btn {
@@ -45,7 +49,6 @@
 }
 
 .nav {
-
   @media screen and (max-width: 1199.5px) {
     position: fixed;
     top: 0;
@@ -72,13 +75,11 @@
     background-color: $tablet-menu-green;
   }
 
-
   &.is-open {
     transform: translateX(0);
   }
 
   &__list {
-
     @include desktop {
       display: flex;
       gap: 27px;
@@ -185,13 +186,12 @@
 }
 
 .logo {
-  &__link{
+  &__link {
     margin-right: auto;
   }
 
   &__icon {
     position: relative;
-
 
     width: 40px;
     height: 37px;
